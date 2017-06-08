@@ -68,9 +68,63 @@ h1 {
   letter-spacing: -1px;
   color: #34495E;
 }
+input {
+    height: 2em;
+    position: relative;
+    padding-right: 13px;
+    padding-left: 13px;
+    min-width: 65px;
+    border-radius: .2em;
+    -webkit-transition-property: background-color,border-color,color;
+    -moz-transition-property: background-color,border-color,color;
+    transition-property: background-color,border-color,color;
+    -webkit-transition-duration: 75ms;
+    -moz-transition-duration: 75ms;
+    transition-duration: 75ms;
+    font-size: 17px;
+    line-height: 24px;
+    font-family: 'GT America',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2a2f35;
+}
+#root_content {
+  /*background-color: red;*/
+}
+.flatbutton {
+    background: #BE1D23;
+  /*background: #34495E;*/
 
+    display: inline-block;
+    border: none;
+    padding: 0;
+    vertical-align: top;
+    width: 120px;
+    /*height: 42px;*/
+    /*height: 2em;
+    line-height: 41px;
+    font-size: 15px;*/
+    white-space: nowrap;
+    color: #fff;
+    text-align: center;
+    text-transform: none;
+    overflow: hidden;
+    border-radius: .2em;
+    -webkit-transition-property: background-color,color,border;
+    -moz-transition-property: background-color,color,border;
+    transition-property: background-color,color,border;
+    -webkit-transition-duration: 75ms;
+    -moz-transition-duration: 75ms;
+    transition-duration: 75ms;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
 .rwd-table {
-  background: #34495E;
+  /*background: #34495E;*/
+  background: #BE1D23;
+
   color: #fff;
   border-radius: .4em;
   overflow: hidden;

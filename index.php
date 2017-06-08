@@ -15,8 +15,8 @@
 	<body>
 		<h1 class="text-center">Sukishi Member Online</h1>
 		
-		<form action="table.php" method="post">
-			<input type="number">
+		<form action="checkpoint.php" method="post">
+    		<input type="number" name="customerid">
 			<button>checkpoint</button>
 		</form>
 		<!-- jQuery -->
