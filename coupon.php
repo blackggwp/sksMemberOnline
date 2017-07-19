@@ -11,7 +11,9 @@ $text = '123';
 <!-- <h1>Sukishi Register Online</h1> -->
 
 <div class="container" style="text-align: -webkit-center;">
-<h1>Set A</h1>
+<h2>Grill Lover Set A</h2>
+<h3>เนื้อหมูติดมันหมักซอสซูกิชิ เสิร์ฟพร้อม ข้าวผัดกระเทียม, ซุปใส และ โค้ก</h3>
+
 <div style="max-width:50%;">
   <img src="img/seta.jpg" style="width: 100%;
 " alt="">
@@ -22,13 +24,14 @@ $text = '123';
 
 <br>
 <br>
+  <div id="res_A"></div>
 <hr>
-
-  <div id="res_seta"></div>
 
 </div>
 
-<h1>Set B</h1>
+<h2>Grill Lover Set B</h2>
+<h3>เนื้อหมูดำคุโรบุตะสไลด์ เสิร์ฟพร้อม ข้าวผัดกระเทียม ซุปใส และ โค้ก</h3>
+ 
 <div style="max-width:50%;">
   <img src="img/setb.jpg" style="width: 100%;
 " alt="">
@@ -39,14 +42,14 @@ $text = '123';
 
 <br>
 <br>
+  <div id="res_B"></div>
 <hr>
-
-  <div id="res_setb"></div>
-
 
 </div>
 
-<h1>Set C</h1>
+<h2>Grill Lover Set C</h2>
+<h3>ปลาหมึกหมักสไตล์เกาหลี และ เบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย, ไข่ตุ๋น, ซุปใส 2 ถ้วย และโค้ก 2 ขวด</h3>
+
 <div style="max-width:50%;">
   <img src="img/setc.jpg" style="width: 100%;
 " alt="">
@@ -57,9 +60,10 @@ $text = '123';
 
 <br>
 <br>
+  <div id="res_C"></div>
+
 <hr>
 
-  <div id="res_setc"></div>
 
 </div>
 

@@ -2,10 +2,15 @@
 	print_r($_POST);
 	$p = $_POST;
 	$r = $p['ref'];
-	echo $r;
+	// echo $r;
 
 include('conn.php');
-$query = "INSERT INTO tcoupon (promotioncode) VALUES ('code')";
-$result = mssql_query($query)or die('Error querying MSSQL database');
-var_dump($result);
+$query = "INSERT INTO tcouponee (promotioncode) VALUES ('code')";
+$stmt = $conn->exec( $query );
+
+	if ($stmt === false) {
+		echo "Save Coupon not complete.\n";
+	}
+   $lastRow = $conn->lastInsertId('tcoupon');  
+   echo "last row = " .$lastRow . "\n";  
  ?>

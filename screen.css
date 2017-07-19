@@ -15,9 +15,12 @@ body,html {
     margin: 0px;
     padding:0px;
 }
-select {
-    height: 45px;
+select,input {
+    font-size: 1.5em;
+    height: 1.6em;
+    width: 80%;
 }
+
 .main_header {
     /*text-align: center;*/
     /*background-color:#9a8787;*/
@@ -83,7 +86,7 @@ select {
     padding:6%;
 }
 .register_panel {
-    background-color: rgba(245, 242, 242, 0.4);
+    background-color: rgba(245, 242, 242, 0.76);
     padding: 6%;
     width: 60%;
     display: inline-block;
@@ -127,7 +130,18 @@ select {
 	padding:20px;
 
 }
-
 .close_dialog:hover{
 	background-color:blue;	
+}
+.condition_text {
+    padding: 2em;
+    line-height: 0.5em;
+}
+@media screen and (min-width: 1200px) {
+    html, body {
+        margin:0 auto;
+        max-width: 1170px;
+
+    }
+    
 }

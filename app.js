@@ -1,23 +1,38 @@
 $( document ).ready(function() {
 	isDatePicker($('#birthdate'));
 
-var barcode = document.getElementsByClassName("getcoupon");
-  $('.seta_btn').click(function(event) {
-	  
-    var data = 'ref=seta&ref2=setb';
-	  $.ajax({
-        method: "POST",
-        url: "savecoupon.php",
-        data: data
-      })
-      .done(function( msg ) {
-        // alert( "Data Saved: " + msg );
-        alert("Save Coupon: "+msg);
+	// $('#register_submit_btn').click(function(event) {
+	// 	register_member();
+	// });
 
-      });
-	  
-    $(barcode).show();
-	
+//clicked coupon set A 
+  $('.seta_btn').click(function(event) {
+	  savecoupon('SKGLA','59009999');
+    
+	//esc key press
+	document.onkeydown = function(evt) {
+    	evt = evt || window.event;
+    	if (evt.keyCode == 27) {
+        	$(barcode).hide();
+    	}
+	};
+  });
+ //clicked coupon set B
+  $('.setb_btn').click(function(event) {
+	  savecoupon('SKGLB','59009999');
+    
+	//esc key press
+	document.onkeydown = function(evt) {
+    	evt = evt || window.event;
+    	if (evt.keyCode == 27) {
+        	$(barcode).hide();
+    	}
+	};
+  });
+ //clicked coupon set C
+  $('.setc_btn').click(function(event) {
+	  savecoupon('SKGLC','59009999');
+    
 	//esc key press
 	document.onkeydown = function(evt) {
     	evt = evt || window.event;
@@ -31,21 +46,53 @@ var barcode = document.getElementsByClassName("getcoupon");
 	  	$(barcode).hide();
 	});
 
+function register_member(){
+	var data = $('#form_register').serialize();
+	  $.ajax({
+        method: "POST",
+        url: "form_register.php",
+        data: data
+      })
+      .done(function( msg ) {
+        alert("Register status: "+msg);
+
+      });
+}
+
+function savecoupon(set_name,customerid){
+	var data = 'setname='+set_name+'&customerid='+customerid;
+	  $.ajax({
+        method: "POST",
+        url: "savecoupon.php",
+        data: data
+      })
+      .done(function( msg ) {
+        alert("Save Coupon: "+msg);
+
+      });
+	  gencode(set_name);
+    // $(barcode).show();
+}
 
 
-
-function gencode($t){
-	  <!-- alert('in func gen'); -->
-    var res_text = String($t);
-      if (res_text.search('/')) {
-        var ar_text = res_text.split('/');
-        var outlet = ar_text[0];
-        var set = ar_text[1];
-        var divid = 'res_'+set;
-      };
-
-   var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=80&text='+outlet+set+'" />';
+function gencode(t){
+    var res_text = String(t);
+    var customerid = '59000001';
+    var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=100&text='+res_text+customerid+'" />';
+    // get last char of string
+    var set_code =  res_text.slice(-1);
+    var divid = 'res_'+set_code;
    document.getElementById(divid).innerHTML = imgbarcode;
+
+   //    if (res_text.search('/')) {
+   //      var ar_text = res_text.split('/');
+   //      var outlet = ar_text[0];
+   //      var set = ar_text[1];
+   //      var divid = 'res_'+set;
+   //    };
+
+   // var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=100&text='+outlet+set+'" />';
+   // document.getElementById(divid).innerHTML = imgbarcode;
 }
 
 function isDatePicker(dpk){

@@ -76,7 +76,7 @@ $outlet = array(
 
 
 
-<form action="form_register.php" method="post">
+<form action="form_register.php" method="post" id="form_register">
 
 <div class="register_panel">
 <p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
@@ -134,7 +134,7 @@ Sukishi E-Member</b></p>
 </div>
 
 
-  <button type="submit" name="form_register_submit" class="" style="margin-top: 60px;background-color: #eb1a21;
+  <button type="submit" name="form_register_submit" id="register_submit_btn" style="margin-top: 60px;background-color: #eb1a21;
     color: #fff;
     width: 100%;
     max-width: 430px;
