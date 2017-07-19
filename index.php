@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
+<?php
+require'header.php';
+?>
+<body>
+<div class="bg_index">
+<section id="root_content">
+<div class="container" style="text-align: center;">
+<!-- <h1>Sukishi Register Online</h1> -->
 
-		<!-- Bootstrap CSS -->
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="medium.css" />
-		
 
-	</head>
-	<body>
-		<h1 class="text-center">Sukishi Member Online</h1>
-		
-		<form action="checkpoint.php" method="post">
-    		<input type="number" name="customerid">
-			<button>checkpoint</button>
-		</form>
-		<!-- jQuery -->
-		<script src="//code.jquery.com/jquery.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
- 		<script src="Hello World"></script>
-	</body>
+
+<form action="form_login.php" method="post">
+
+<div class="portal_panel">
+<div class="portal_login" style="width:50%;">
+<h2>เข้าสู่ระบบ</h2>
+
+<h2>อีเมล</h2>
+<input type="email" name="login_email" required="required">
+<h2>รหัสผ่าน</h2>
+<input type="password" name="login_password" required="required">
+
+<div class="remember_forget">
+
+	<div class="remember_login" style="display:inline;width:180px;">
+			
+
+
+	</div>
+	<br>
+	
+
+<a href="form_login.php">
+	<button type="submit" class="login_btn" name="submit_login_form">เข้าสู่ระบบ</button>
+</a>
+</div>
+
+</div>
+
+
+</form>
+
+<div class="portal_regis" style="padding-top: 10px;width: 40%;margin-left: 20px;margin-right:0px">
+	<p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
+Sukishi E-Member</b></p>
+<p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ
+พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
+
+<p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด</p>
+<a href="register.php">
+	<button type="button" class="register_btn">สมัครสมาชิก</button>
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+</div>
+
+</body>
+<?php
+  require 'footer.php';
+?>
+
 </html>

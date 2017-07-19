@@ -18,7 +18,7 @@
     
     <form  method="post">
         <!-- <input type="number" name="customerid" placeholder="CustomerID"> -->
-        <input type="text" name="customerid" placeholder="CustomerID" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        <input type="text" name="customerid" placeholder="CustomerID" onkeypress='return event.charCode >= 48 && event.charCode <= 57'> <!-- allow 1-9 only -->
 </input>
         <input type="submit" class="flatbutton" value="checkpoint">
     </form>
@@ -34,6 +34,18 @@
     // showArray($customerid);
   
 ?>
+
+<!-- show point -->
+<section id="sum_point">
+<h1>Customer Summary Point</h1>
+
+<?php
+// Show Customer Point
+$customer_point = getPoint($customerid);
+echo '<div class="circle_point">'.$customer_point.'</div>';
+
+?>
+</section>
 
 <section id="cus_transection">
 <h1>Customer Transection</h1>
@@ -56,14 +68,13 @@ $query_transection = 'SELECT TOP (200) SUM(tcustomerlog_cal.point + tcustomerlog
 FROM         tcustomerlog_cal LEFT OUTER JOIN
                       T_Otherdiscount ON tcustomerlog_cal.pycode = T_Otherdiscount.Othdisccode
 WHERE     (tcustomerlog_cal.customerid = \''.$customerid.'\')
-GROUP BY tcustomerlog_cal.customerid, tcustomerlog_cal.pycode, T_Otherdiscount.Othdiscname, tcustomerlog_cal.systemdate';
+GROUP BY tcustomerlog_cal.customerid, tcustomerlog_cal.pycode, T_Otherdiscount.Othdiscname, tcustomerlog_cal.systemdate
+ORDER BY tcustomerlog_cal.systemdate DESC';
 
 // echo "$query_transection";
 // simple query  
 $stmt = $conn->query( $query_transection );
-if (!$stmt) {
-  echo "string";
-}
+
 while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
   echo "<tr>";
    print_r( "<td data-th=\"CusID\">".$row['customerid'] ."</td>" );
@@ -76,47 +87,28 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 } 
 
 echo "</table>";
+echo "</section>";
 
-  
-?>
-</section>
+  }
 
-<section id="sum_point">
-<h1>Customer Summary Point</h1>
-<table class="rwd-table">
-<tr>
-  <th>CustomerID</th>
-  <th>SumPoint</th>
+function getPoint($customerid) {
+  global $conn;
 
-</tr>
+$q = 'SELECT     TOP (1) SUM(point + addpoint - delpoint) AS sumpoint, customerid
+FROM         tcustomerlog_cal
+WHERE     (customerid = \''.$customerid.'\')
+GROUP BY customerid';
 
-<?php
-$query_point = 'SELECT TOP (200) customerid,SUM(point + addpoint - delpoint) AS sumpoint FROM tcustomerlog_cal
-          WHERE     (customerid = \''.$customerid.'\')
-          GROUP BY customerid';
+$stmt = $conn->query( $q );
 
-// simple query  
-$stmt = $conn->query( $query_point );  
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
-  echo "<tr>";
-   print_r( "<td data-th=\"CusID\">".$row['customerid'] ."</td>" );
-   print_r( "<td data-th=\"CusPoint\">".$row['sumpoint'] ."</td>" );
+$row = $stmt->fetch( PDO::FETCH_ASSOC);
+$p = $row['sumpoint'];
 
-   echo "</tr>";
-} 
+  return $p;
 
-// query for one column  
-// $stmt = $conn->query( $query, PDO::FETCH_COLUMN, 1);  
-// while ( $row = $stmt->fetch() ){  
-//    echo "$row\n";  
-// }  
-
-
-echo '</table>';
-echo '</section>';
 }
 ?>
-</section>
+
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Add respond.js for responsive table-->
