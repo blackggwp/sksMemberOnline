@@ -5,7 +5,7 @@ require'header.php';
 
 $outlet = array(
 'B12' =>
-'Sukishi BBQThe Mall Bangkapi',
+'Sukishi BBQ The Mall Bangkapi',
 'S01' =>
 'Sukishi BBQ Central Pinklao',
 'S10' =>
@@ -49,17 +49,17 @@ $outlet = array(
 'S69'=>
 'Sukishi BBQ Mega Bangna',
 'S71'=>
-'BBQ FASHION ISLAND',
+'Sukishi BBQ FASHION ISLAND',
 'S72'=>
-'BBQ CT CHIANG MAI',
+'Sukishi BBQ CT CHIANG MAI',
 'S73'=>
-'BBQ Robinson Saraburi',
+'Sukishi BBQ Robinson Saraburi',
 'S74'=>
-'BBQ Central Hadyai1',
+'Sukishi BBQ Central Hadyai1',
 'S76'=>
-'BBQ Robinson Surin',
+'Sukishi BBQ Robinson Surin',
 'S78'=>
-'BBQ ROBINSON CHACHENGSAO',
+'Sukishi BBQ ROBINSON CHACHENGSAO',
 'S79'=>
 'Sukishi BBQ Central Rama 2',
 'S80'=>
@@ -79,12 +79,13 @@ $outlet = array(
 <form action="form_register.php" method="post" id="form_register">
 
 <div class="register_panel">
+<div class="welcome_message">
 <p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
 Sukishi E-Member</b></p>
-<p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ
-
-พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร 
-รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด</p>
+<p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ</p>
+<p>พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
+<p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
+</div>
 <hr>
 <h2>สมัครสมาชิก</h2>
 
@@ -118,7 +119,7 @@ Sukishi E-Member</b></p>
     <select name="outlet" id="outlet">
   <?php
     foreach ($outlet as $key => $value) {
-      echo '<option value="'.$key.'">'.$key.'='.$value.'</option>';
+      echo '<option value="'.$key.'">'.$value.'</option>';
     }
   ?>
 </select>
@@ -128,22 +129,13 @@ Sukishi E-Member</b></p>
 
 <div class="checkbox">
   <label>
-    <input type="checkbox" name="receiveInformation" value="true">
+    <input type="checkbox" class="receiveInformation" name="receiveInformation">
     ต้องการรับข้อมูลข่าวสาร ทางอีเมลและ SMS
   </label>
 </div>
 
 
-  <button type="submit" name="form_register_submit" id="register_submit_btn" style="margin-top: 60px;background-color: #eb1a21;
-    color: #fff;
-    width: 100%;
-    max-width: 430px;
-    height: 52px;
-    font-size: 1.88em;
-    font-weight: 700;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;">สมัครสมาชิก</button>
+  <button type="submit" name="form_register_submit" id="register_submit_btn">สมัครสมาชิก</button>
 
 </div>
 

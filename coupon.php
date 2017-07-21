@@ -3,10 +3,18 @@
 <?php
 require'header.php';
 $text = '123';
+if(isset($_COOKIE['customerid'])){ 
+  $customerid = $_COOKIE['customerid'];
+}
 ?>
 <body>
 <div class="bg_index">
 <section id="root_content">
+
+<input type="hidden" value="<?php echo "599999999"; ?>">
+
+<br>
+
 <div class="container" style="text-align: center;">
 <!-- <h1>Sukishi Register Online</h1> -->
 
@@ -77,15 +85,15 @@ $text = '123';
 </div>
 
 
-<div class="getcoupon">
-<div class="barcode_panel">
+<div class="getcoupon_dialog">
+<!-- <div class="barcode_panel">
 	<img class="img_barcode" alt="Sukishi Promotion" src="barcode.php?print=true&size=80&text=SKGLA59000001" />
-</div>
+</div> -->
 
   <div class="close_dialog">
   	<img class="close_img" alt="close" src="img/close.png" />
   </div>
-  </div>
+</div>
 
 
 </body>

@@ -14,7 +14,7 @@ require'header.php';
 <form action="form_login.php" method="post">
 
 <div class="portal_panel">
-<div class="portal_login" style="width:50%;">
+<div class="portal_login_panel">
 <h2>เข้าสู่ระบบ</h2>
 
 <h2>อีเมล</h2>
@@ -22,14 +22,11 @@ require'header.php';
 <h2>รหัสผ่าน</h2>
 <input type="password" name="login_password" required="required">
 
-<div class="remember_forget">
+<div class="forget_password">
+    <a target="_blank" href="forgetpass.php">ลืมรหัสผ่าน</a>
+</div>
+<br>
 
-	<div class="remember_login" style="display:inline;width:180px;">
-			
-
-
-	</div>
-	<br>
 	
 
 <a href="form_login.php">
@@ -37,18 +34,18 @@ require'header.php';
 </a>
 </div>
 
-</div>
 
 
 </form>
 
-<div class="portal_regis" style="padding-top: 10px;width: 40%;margin-left: 20px;margin-right:0px">
-	<p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
+<div class="portal_register_panel">
+<div class="welcome_message">
+<p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
 Sukishi E-Member</b></p>
-<p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ
-พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
-
-<p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด</p>
+<p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ</p>
+<p>พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
+<p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
+</div>
 <a href="register.php">
 	<button type="button" class="register_btn">สมัครสมาชิก</button>
 </a>

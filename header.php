@@ -32,5 +32,13 @@
         <a href="register.php">register</a>
         <a href="coupon.php">coupon</a>
 
+
+    </div>
+
+</div>
+<div class="usercmd">
+    <div style="float:right;">
+        <?php if(isset($_COOKIE['customerid']) && ($_COOKIE['customerid'] != '')){ echo '<div class="logout_btn"><a href="logout.php">logout</a></div>'; }
+         ?>
     </div>
 </div>

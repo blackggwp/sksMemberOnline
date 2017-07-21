@@ -7,7 +7,11 @@ $( document ).ready(function() {
 
 //clicked coupon set A 
   $('.seta_btn').click(function(event) {
-	  savecoupon('SKGLA','59009999');
+  	var set_name = 'SKGLA';
+  	var customerid = String($('#customerid').val());
+	alert(customerid);
+  	
+	  savecoupon(set_name,customerid);
     
 	//esc key press
 	document.onkeydown = function(evt) {
@@ -19,7 +23,9 @@ $( document ).ready(function() {
   });
  //clicked coupon set B
   $('.setb_btn').click(function(event) {
-	  savecoupon('SKGLB','59009999');
+  	var set_name = 'SKGLB';
+  	var customerid = String($('#customerid').val());
+	  savecoupon(set_name,customerid);
     
 	//esc key press
 	document.onkeydown = function(evt) {
@@ -31,7 +37,9 @@ $( document ).ready(function() {
   });
  //clicked coupon set C
   $('.setc_btn').click(function(event) {
-	  savecoupon('SKGLC','59009999');
+  	var set_name = 'SKGLC';
+  	var customerid = String($('#customerid').val());
+	  savecoupon(set_name,customerid);
     
 	//esc key press
 	document.onkeydown = function(evt) {
@@ -60,6 +68,7 @@ function register_member(){
 }
 
 function savecoupon(set_name,customerid){
+
 	var data = 'setname='+set_name+'&customerid='+customerid;
 	  $.ajax({
         method: "POST",
@@ -67,23 +76,21 @@ function savecoupon(set_name,customerid){
         data: data
       })
       .done(function( msg ) {
-        alert("Save Coupon: "+msg);
+        // alert("Save Coupon: "+msg);
 
       });
-	  gencode(set_name);
+
+	  gencode(set_name,customerid);
     // $(barcode).show();
 }
 
 
-function gencode(t){
-    var res_text = String(t);
-    var customerid = '59000001';
-    var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=100&text='+res_text+customerid+'" />';
+function gencode(set_name,customerid){
+    var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=100&text='+set_name+customerid+'" />';
     // get last char of string
-    var set_code =  res_text.slice(-1);
-    var divid = 'res_'+set_code;
-   document.getElementById(divid).innerHTML = imgbarcode;
-
+    var last_char_of_set_name =  set_name.slice(-1);
+    var result = 'res_'+last_char_of_set_name;
+   document.getElementById(result).innerHTML = imgbarcode;
    //    if (res_text.search('/')) {
    //      var ar_text = res_text.split('/');
    //      var outlet = ar_text[0];
