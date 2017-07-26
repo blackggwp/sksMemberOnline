@@ -11,7 +11,7 @@ if(isset($_COOKIE['customerid'])){
 <div class="bg_index">
 <section id="root_content">
 
-<input type="hidden" value="<?php echo "599999999"; ?>">
+<input type="hidden" name="customerid" id="customerid" value="<?php echo "$customerid"; ?>">
 
 <br>
 
@@ -22,7 +22,7 @@ if(isset($_COOKIE['customerid'])){
 <h2>Grill Lover Set A</h2>
 <h3>เนื้อหมูติดมันหมักซอสซูกิชิ เสิร์ฟพร้อม ข้าวผัดกระเทียม, ซุปใส และ โค้ก</h3>
 
-<div style="max-width:50%;">
+<div class="imgset">
   <img src="img/seta.jpg" style="width: 100%;
 " alt="">
 <br>
@@ -40,7 +40,7 @@ if(isset($_COOKIE['customerid'])){
 <h2>Grill Lover Set B</h2>
 <h3>เนื้อหมูดำคุโรบุตะสไลด์ เสิร์ฟพร้อม ข้าวผัดกระเทียม ซุปใส และ โค้ก</h3>
  
-<div style="max-width:50%;">
+<div class="imgset">
   <img src="img/setb.jpg" style="width: 100%;
 " alt="">
 <br>
@@ -58,7 +58,7 @@ if(isset($_COOKIE['customerid'])){
 <h2>Grill Lover Set C</h2>
 <h3>ปลาหมึกหมักสไตล์เกาหลี และ เบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย, ไข่ตุ๋น, ซุปใส 2 ถ้วย และโค้ก 2 ขวด</h3>
 
-<div style="max-width:50%;">
+<div class="imgset">
   <img src="img/setc.jpg" style="width: 100%;
 " alt="">
 <br>

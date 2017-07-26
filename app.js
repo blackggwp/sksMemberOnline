@@ -9,7 +9,6 @@ $( document ).ready(function() {
   $('.seta_btn').click(function(event) {
   	var set_name = 'SKGLA';
   	var customerid = String($('#customerid').val());
-	alert(customerid);
   	
 	  savecoupon(set_name,customerid);
     
@@ -86,7 +85,7 @@ function savecoupon(set_name,customerid){
 
 
 function gencode(set_name,customerid){
-    var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=100&text='+set_name+customerid+'" />';
+    var imgbarcode =  '<img alt="testing" style="margin-top: 20px;" src="barcode.php?print=true&size=80&text='+set_name+customerid+'" />';
     // get last char of string
     var last_char_of_set_name =  set_name.slice(-1);
     var result = 'res_'+last_char_of_set_name;

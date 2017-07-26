@@ -24,7 +24,7 @@ select,input {
 .main_header {
     /*text-align: center;*/
     /*background-color:#9a8787;*/
-    background-image:url("img/header2.jpg");
+    background-image:url("img/header2-min.jpg");
     height: 300px;
     width: 100%;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ select,input {
 
 .bg_index { 
     /* The image used */
-    background-image: url("img/bg_index.jpg");
+    background-image: url("img/bg_index-min.jpg");
 
     /* Full height */
     height: 100%; 
@@ -46,7 +46,7 @@ select,input {
 }
 .bg_register { 
     /* The image used */
-    background-image: url("img/bg_regis.jpg");
+    background-image: url("img/bg_regis-min.jpg");
 
     /* Full height */
     height: 100%; 
@@ -59,12 +59,12 @@ select,input {
 .login_btn {
     background-color: #d6a1a3;
     color: #560b0b;
-    width: 100%;
-    max-width: 430px;
+    width: 80%;
+    /*max-width: 430px;*/
     font-size: 1.88em;
     font-weight: 700;
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
 }
 .register_btn {
     margin-top: 60px;
@@ -106,7 +106,7 @@ select,input {
 .register_panel {
     background-color: rgba(245, 242, 242, 0.76);
     padding: 6%;
-    width: 60%;
+    width: 80%;
     display: inline-block;
     font-size: 0.8em;
 }
@@ -169,7 +169,8 @@ select,input {
 
     }
 .condition_text {
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
+    padding: 5%;
 }
 .receiveInformation {
     width: 10%;
@@ -180,6 +181,17 @@ select,input {
     max-width: 100px;
     width: 4em;
     border-radius: 6px;
+}
+#res_A,#res_B,#res_C {
+    max-width: 250px;
+    background-color: white;
+    margin-left: -15px;
+}
+.imgset {
+    padding: 5%;
+}
+input::placeholder {
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -197,10 +209,26 @@ select,input {
         display:block;
         margin-top: 10%;
     }
+    .main_header {
+        min-height: 100px;
+        height: 100px;
+    }
 }
 @media screen and (max-width: 480px) {
     .main_footer{
     display: block;
+    padding-left: 5%;
+    padding-bottom: 5%;
+
+    }
+    .footer_logo{
+        width: 100%;
+    }
+    .footer_followus{
+        width: 100%;
+    }
+    .footer_contactus{
+        width: 100%;
     }
 
 

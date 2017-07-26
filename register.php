@@ -117,6 +117,7 @@ Sukishi E-Member</b></p>
     </select> -->
 
     <select name="outlet" id="outlet">
+    <option  selected>Choose here</option>
   <?php
     foreach ($outlet as $key => $value) {
       echo '<option value="'.$key.'">'.$value.'</option>';
