@@ -1,41 +1,37 @@
-<?php  
-phpmail();
-function phpmail(){
-require 'libs/PHPMailer/class.phpmailer.php';
+<?php
+date_default_timezone_set('Asia/Bangkok');
 
-$mail = new PHPMailer;
+	/***
+	Server SMTP/POP : mail.thaicreate.com
+	Email Account : webmaster@thaicreate.com
+	Password : 123456
+	*/
+	require_once('libs/phpmailer/class.phpmailer.php');
+	$mail = new PHPMailer();
+	// $mailer = new PHPMailer(true);
+	// $mail->IsHTML(true);
+	$mail->IsSMTP();
+	$mail->SMTPAuth = true; // enable SMTP authentication
+	$mail->Host = "192.168.0.144"; // sets GMAIL as the SMTP server
+	// $mail->SMTPSecure = "ssl"; // sets the prefix to the servier
+	// $mail->Port = 465; // set the SMTP port for the GMAIL server
 
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
+	$mail->Username = "fuji"; // GMAIL username 
+	$mail->Password = "1234"; // GMAIL password
+	$mail->From = "black.thitikorn@gmail.com"; // "name@yourdomain.com";
+	//$mail->AddReplyTo = "support@thaicreate.com"; // Reply
+	$mail->FromName = "Admin Sukishi";  // set from Name
+	$mail->Subject = "Test sending mail."; 
+	$mail->Body = "My Body & <b>My Description</b>";
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = '203.170.129.38';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'noreply@sukishigroup.com';                 // SMTP username
-$mail->Password = 'sukishi02910';                           // SMTP password
-// $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-// $mail->Port = 465;                                    // TCP port to connect to
+	$mail->AddAddress("ironhighh@gmail.com", "Mr.Black"); // to Address
+	$mail->SMTPDebug = 2;
 
-$mail->setFrom('black.thitikorn@gmail.com', 'Mailer');
-$mail->addAddress('ironhighh@gmail.com', 'Joe User');     // Add a recipient
-// $mail->addAddress('ellen@example.com');               // Name is optional
-// $mail->addReplyTo('info@example.com', 'Information');
-// $mail->addCC('cc@example.com');
-// $mail->addBCC('bcc@example.com');
-
-// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-// $mail->isHTML(true);                                  // Set email format to HTML
-
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent';
-}
-}
-
+	$status = $mail->Send();
+	if ($status) {
+	 	echo 'send mail complete';
+	 }else
+	 {
+	 	echo "send mail not complete";
+	 }
 ?>
