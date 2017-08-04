@@ -1,6 +1,7 @@
 <div class="condition_text">
 <h4>เงื่อนไข</h4>
-	<ul type="square" class="condition_text_detail">
+<div id="toggle_condition_text"><a href="#">แสดงข้อมูลเพิ่มเติม</a></div>
+	<ul type="square" id="condition_text_detail">
 		<li>สิทธิพิเศษสำหรับสมาชิกที่ลงทะเบียนกับ Sukishi แล้วเท่านั้น</li>
 		<li>กรอกข้อมูลให้ครบเพื่อรับสิทธิพิเศษมากมายทางอีเมล และ SMS</li>
 		<li>สามารถลงทะเบียน ได้ 1 คน ต่อ 1 สิทธิเท่านั้น</li>

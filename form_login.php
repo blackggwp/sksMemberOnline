@@ -4,6 +4,8 @@ require'func.php';
 
 $p = $_POST;
 
+if (isset($p['submit_login_form'])) {
+	
 if ($p['login_email'] && $p['login_password'] != '') {
 	# code...
 	// showArray($p);
@@ -36,7 +38,7 @@ $customerinfoArray = $stmt->fetch( PDO::FETCH_ASSOC );
 
 
 }
-
+}
 
 	
 

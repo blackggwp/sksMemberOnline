@@ -1,11 +1,5 @@
 <?php
 date_default_timezone_set('Asia/Bangkok');
-
-	/***
-	Server SMTP/POP : mail.thaicreate.com
-	Email Account : webmaster@thaicreate.com
-	Password : 123456
-	*/
 	require_once('libs/phpmailer/class.phpmailer.php');
 	$mail = new PHPMailer();
 	// $mailer = new PHPMailer(true);

@@ -18,12 +18,12 @@ require'header.php';
 <h2>เข้าสู่ระบบ</h2>
 
 <h2>อีเมล</h2>
-<input type="email" name="login_email" required="required">
+<input type="email" id="login_email" name="login_email" required="required">
 <h2>รหัสผ่าน</h2>
-<input type="password" name="login_password" required="required">
+<input type="password" id="login_password" name="login_password" required="required">
 
 <div class="forget_password">
-    <a target="_blank" href="forgetpass.php">ลืมรหัสผ่าน</a>
+    <a class="forget_password" href="forgetpass.php" target="_blank">ลืมรหัสผ่าน</a>
 </div>
 <br>
 

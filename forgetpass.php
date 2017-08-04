@@ -1,99 +1,73 @@
 <?php
+require 'conn.php';
+require 'func.php';
+date_default_timezone_set('Asia/Bangkok');
+$p = $_POST;
+// showArray($_POST);
 
-try {
+if (isset($p['submit_forgetpass'])) {
+	$userEmail = $p['input_forget_email'];
+
+$sql = "SELECT * FROM tcustomer WHERE email = '$userEmail' ";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+// var_dump($stmt);
+
 	
+	if( $stmt->rowCount() ) {
+		$customerinfoArray = $stmt->fetch( PDO::FETCH_ASSOC );
 
-phpmail2();
-}catch(Exception $e)  
-			{   
-				die( print_r( $e->getMessage() ) );   
-			}
-function phpmail2(){
-require 'libs/PHPMailer/PHPMailerAutoload.php';
-require 'libs/PHPMailer/class.phpmailer.php';
-$mail = new PHPMailer;
-$mail->isSMTP(); 
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-$mail->setFrom('from@example.com', 'Your Name');
-$mail->addAddress('myfriend@example.net', 'My Friend');
-$mail->Subject  = 'First PHPMailer Message';
-$mail->Body     = 'Hi! This is my first e-mail sent through PHPMailer.';
-$mail->Port = 465;  
-$mail->SMTPSecure = 'SSL';
-                                  // TCP port to connect to
+		$userPass = $customerinfoArray['password'];
+		sendmail($userEmail,$userPass);
 
-if(!$mail->send()) {
-  echo 'Message was not sent.';
-  echo 'Mailer error: ' . $mail->ErrorInfo;
-} else {
-  echo 'Message has been sent.';
+
+ 	}else{
+ 		echo "<h1>อีเมลล์นี้ไม่อยู่ในระบบ</h1>";
+	}
+
 }
+
+
+function sendmail($mailto,$userPass){
+	require_once('libs/phpmailer/class.phpmailer.php');
+	$mail = new PHPMailer();
+	// $mailer = new PHPMailer(true);
+	$mail->IsHTML(true);
+	$mail->IsSMTP();
+	$mail->SMTPAuth = true; // enable SMTP authentication
+	$mail->Host = "192.168.0.144"; // sets GMAIL as the SMTP server
+	// $mail->SMTPSecure = "ssl"; // sets the prefix to the servier
+	// $mail->Port = 465; // set the SMTP port for the GMAIL server
+
+	$mail->Username = "fuji"; // GMAIL username 
+	$mail->Password = "1234"; // GMAIL password
+	$mail->From = "black.thitikorn@gmail.com"; // "name@yourdomain.com";
+	//$mail->AddReplyTo = "support@thaicreate.com"; // Reply
+	$mail->FromName = "Admin Sukishi";  // set from Name
+	$mail->Subject = "Password sukishi E-Member."; 
+	$mail->Body = "Your password is: <b>".$userPass."</b>";
+
+
+	// $mail->AddAddress("ironhighh@gmail.com", "Mr.Black"); // to Address
+	$mail->AddAddress($mailto); // to Address
+
+	// $mail->SMTPDebug = 2; 				//for debug
+
+	$status = $mail->Send();
+	if ($status) {
+	 	// echo 'send mail complete';
+ 		echo "<h1>ส่งรหัสผ่านของท่านไปตามที่อยู่อีเมลล์นี้แล้ว</h1>";
+
+	 }else
+	 {
+	 	echo "send mail not complete";
+	 }
 }
-function phpmail(){
 	
-require 'libs/PHPMailer/PHPMailerAutoload.php';
-$mail = new PHPMailer;
-
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
-$mail->Debugoutput = 'html';
-$mail->isSMTP();
-// $mail->Host = "ssl://smtp.gmail.com";
-$mail->SMTPSecure = 'SSL';
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username  = 'ironhighh@gmail.com';                 // SMTP username
-$mail->Password = 'BLaCK027471638';                           // SMTP password
-$mail->Port = 465;                                    // TCP port to connect to
-
-$mail->setFrom('ironhighh@gmail.com', 'Mailer');
-$mail->addAddress('ironhighh@gmail.com', 'Black iron');     // Add a recipient
-$mail->addAddress('ironhighh@gmail.com');               // Name is optional
-$mail->addReplyTo('info@example.com', 'Information');
-$mail->addCC('cc@example.com');
-$mail->addBCC('bcc@example.com');
-
-// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-// $mail->isHTML(true);                                  // Set email format to HTML
-
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-echo !extension_loaded('openssl')?"Not Available":"Available";
-
-
-if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent';
-}
-}
-
-function sendmail(){
-	// include 'libs/thaimailer.php';
-	ini_set("SMTP", "192.168.0.144");
-	// ini_set('smtp_port',25);
-	try{
-		$to = "ironhighh@gmail.com";
-		$from = "black.thitikorn@gmail.com";
-		$subject = "test subject";
-		$message = "content";
-		// $headers = "From: webmaster@example.com" . "\r\n" .
-		// "CC: black.thitikorn@gmail.com";
-
-		$headers =  'MIME-Version: 1.0' . "\r\n"; 
-		$headers .= 'From: Your name <info@address.com>' . "\r\n";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";	
-		 if (mail($to, $subject, $message,$headers)){echo "mail has been sended";}
-		 else{echo "mail can't send";}
-		}catch(Exception $e)  
-			{   
-				die( print_r( $e->getMessage() ) );   
-			}
-			
-}
-
-
-
 ?>
+<form action="" method="post">
+<h2>อีเมล</h2>
+<input type="email" id="input_forget_email" name="input_forget_email" required="required">
+	<button type="submit" name="submit_forgetpass">ส่ง</button>
+</form>
+<a href="index.php">Back to homepage</a>

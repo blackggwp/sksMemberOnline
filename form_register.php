@@ -4,6 +4,8 @@ require'func.php';
 date_default_timezone_set('Asia/Bangkok');
 
 $p = $_POST;
+if (isset($p['form_register_submit'])) {
+
 if ((isset($p['registerEmail']) && (isset($p['registerPassword'])))) {
 	// showArray($p);
 	$email = $p['registerEmail'];
@@ -46,7 +48,7 @@ catch(Exception $e)
 
 
 			// redirect to homepage
- 		 // header( 'refresh: 2; url=coupon.php' );
+ 		 header( 'refresh: 2; url=coupon.php' );
 
 		 exit(0);
 	}else{
@@ -55,66 +57,8 @@ catch(Exception $e)
 	}
 
 }
-function sendmail(){
-	// include 'libs/thaimailer.php';
-	ini_set("SMTP", "192.168.0.144");
-	// ini_set('smtp_port',25);
-	try{
-		$to = "ironhighh@gmail.com";
-		$from = "black.thitikorn@gmail.com";
-		$subject = "test subject";
-		$message = "content";
-		// $headers = "From: webmaster@example.com" . "\r\n" .
-		// "CC: black.thitikorn@gmail.com";
-
-		$headers =  'MIME-Version: 1.0' . "\r\n"; 
-		$headers .= 'From: Your name <info@address.com>' . "\r\n";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";	
-		 if (mail($to, $subject, $message,$headers)){echo "mail has been sended";}
-		 else{echo "mail can't send";}
-		}catch(Exception $e)  
-			{   
-				die( print_r( $e->getMessage() ) );   
-			}
-			
 }
-function phpmail(){
-require 'libs/PHPMailer/PHPMailerAutoload.php';
 
-$mail = new PHPMailer;
-
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.google.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'ironhighh@gmail.com';                 // SMTP username
-$mail->Password = 'BLaCK027471638';                           // SMTP password
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465;                                    // TCP port to connect to
-
-$mail->setFrom('black.thitikorn@gmail.com', 'Mailer');
-$mail->addAddress('ironhighh@gmail.com', 'Joe User');     // Add a recipient
-// $mail->addAddress('ellen@example.com');               // Name is optional
-// $mail->addReplyTo('info@example.com', 'Information');
-// $mail->addCC('cc@example.com');
-// $mail->addBCC('bcc@example.com');
-
-// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-// $mail->isHTML(true);                                  // Set email format to HTML
-
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent';
-}
-}
 function updatetcustomer($conn){
 	global $customerid,$lastInsertId,$systemdate;
 	$updatesql = "UPDATE tcustomer SET customerid = '$customerid',systemdate = '$systemdate' WHERE (id = '$lastInsertId') ";

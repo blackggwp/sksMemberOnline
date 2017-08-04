@@ -1,6 +1,57 @@
 $( document ).ready(function() {
-	isDatePicker($('#birthdate'));
+function savecoupon(set_name,customerid){
 
+  var data = 'setname='+set_name+'&customerid='+customerid;
+    $.ajax({
+        method: "POST",
+        url: "savecoupon.php",
+        data: data
+      })
+      .done(function( msg ) {
+        // alert("Save Coupon: "+msg);
+
+      });
+
+    gencode(set_name,customerid);
+    // $(barcode).show();
+}
+
+function gencode(set_name,customerid){
+    var imgbarcode =  '<img class="imgbarcode" alt="testing" src="barcode.php?print=true&size=60&sizefactor=1&text='+set_name+customerid+'" />';
+    // get last char of string
+    var last_char_of_set_name =  set_name.slice(-1);
+    var result = 'res_'+last_char_of_set_name;
+   document.getElementById(result).innerHTML = imgbarcode;
+   //    if (res_text.search('/')) {
+   //      var ar_text = res_text.split('/');
+   //      var outlet = ar_text[0];
+   //      var set = ar_text[1];
+   //      var divid = 'res_'+set;
+   //    };
+
+   // var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=100&text='+outlet+set+'" />';
+   // document.getElementById(divid).innerHTML = imgbarcode;
+}
+
+function isDatePicker(dpk){
+    $( dpk ).datepicker({
+        dateFormat: 'dd/mm/yy',
+        yearRange: "1930:",
+        changeYear: true,
+        changeMonth: true,
+        monthNamesShort: ["1","2","3","4","5","6","7","8","9","10","11","12"]
+    });
+}
+
+///////////////////////////////////////////////////////
+// toggle condition text
+$("#condition_text_detail").hide();
+  $("#toggle_condition_text").click(function(event) {
+    $("#condition_text_detail").toggle();
+  });
+
+	isDatePicker($('#birthdate'));
+  $('#login_email').focus();
 	// $('#register_submit_btn').click(function(event) {
 	// 	register_member();
 	// });
@@ -64,51 +115,6 @@ function register_member(){
         alert("Register status: "+msg);
 
       });
-}
-
-function savecoupon(set_name,customerid){
-
-	var data = 'setname='+set_name+'&customerid='+customerid;
-	  $.ajax({
-        method: "POST",
-        url: "savecoupon.php",
-        data: data
-      })
-      .done(function( msg ) {
-        // alert("Save Coupon: "+msg);
-
-      });
-
-	  gencode(set_name,customerid);
-    // $(barcode).show();
-}
-
-
-function gencode(set_name,customerid){
-    var imgbarcode =  '<img alt="testing" style="margin-top: 20px;" src="barcode.php?print=true&size=80&text='+set_name+customerid+'" />';
-    // get last char of string
-    var last_char_of_set_name =  set_name.slice(-1);
-    var result = 'res_'+last_char_of_set_name;
-   document.getElementById(result).innerHTML = imgbarcode;
-   //    if (res_text.search('/')) {
-   //      var ar_text = res_text.split('/');
-   //      var outlet = ar_text[0];
-   //      var set = ar_text[1];
-   //      var divid = 'res_'+set;
-   //    };
-
-   // var imgbarcode =  '<img alt="testing" src="barcode.php?print=true&size=100&text='+outlet+set+'" />';
-   // document.getElementById(divid).innerHTML = imgbarcode;
-}
-
-function isDatePicker(dpk){
-    $( dpk ).datepicker({
-        dateFormat: 'dd/mm/yy',
-        yearRange: "1930:",
-        changeYear: true,
-        changeMonth: true,
-        monthNamesShort: ["1","2","3","4","5","6","7","8","9","10","11","12"]
-    });
 }
 
 });

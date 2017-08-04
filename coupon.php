@@ -16,7 +16,6 @@ if(isset($_COOKIE['customerid'])){
 <br>
 
 <div class="container" style="text-align: center;">
-<!-- <h1>Sukishi Register Online</h1> -->
 
 <div class="container" style="text-align: -webkit-center;">
 <h2>Grill Lover Set A</h2>
