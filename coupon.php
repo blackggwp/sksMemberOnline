@@ -5,7 +5,9 @@ require'header.php';
 $text = '123';
 if(isset($_COOKIE['customerid'])){ 
   $customerid = $_COOKIE['customerid'];
-}
+
+
+
 ?>
 <body>
 <div class="bg_index">
@@ -22,8 +24,7 @@ if(isset($_COOKIE['customerid'])){
 <h3>เนื้อหมูติดมันหมักซอสซูกิชิ เสิร์ฟพร้อม ข้าวผัดกระเทียม, ซุปใส และ โค้ก</h3>
 
 <div class="imgset">
-  <img src="img/seta.jpg" style="width: 100%;
-" alt="">
+  <img class="test-popup-link" src="img/seta.jpg" style="width: 100%;">
 <br>
 <br>
 
@@ -100,3 +101,13 @@ if(isset($_COOKIE['customerid'])){
   require 'footer.php';
 ?>
 </html>
+
+<?php  }else{ 
+      // redirect to homepage
+      ?>
+      <script>alert('กรุณาเข้าสู่ระบบ');</script>
+      <?php
+     header( 'refresh: 0; url=index.php' );
+
+     exit(0);
+     } ?>

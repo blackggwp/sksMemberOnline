@@ -111,8 +111,8 @@ select,input {
 }
 .portal_panel {
     display: -webkit-inline-box;*/
-    font-size: 0.8em;
     padding-bottom: 20px;
+    font-size: 0.8em;
 }
 .portal_login_panel {
     /*padding:6%;*/
@@ -198,12 +198,30 @@ select,input {
 .receiveInformation {
     width: 10%;
 }
-.logout_btn {
-    background-color: rgba(255, 0, 0, 0.65);
+#logout_btn {
+    background-color: #ccc;
     text-align: center;
-    max-width: 100px;
-    width: 4em;
-    border-radius: 6px;
+    max-width: 200px;
+    width: 8em;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#changepass_btn {
+    background-color: #ccc;
+    text-align: center;
+    max-width: 200px;
+    width: 8em;
+    cursor: pointer;
+}
+#changepass_panel {
+    display:none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#f1a8994d;
+
 }
 #res_A,#res_B,#res_C {
     max-width: 500px;

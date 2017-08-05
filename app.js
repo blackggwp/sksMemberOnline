@@ -17,7 +17,7 @@ function savecoupon(set_name,customerid){
 }
 
 function gencode(set_name,customerid){
-    var imgbarcode =  '<img class="imgbarcode" alt="testing" src="barcode.php?print=true&size=60&sizefactor=1&text='+set_name+customerid+'" />';
+    var imgbarcode =  '<img class="imgbarcode" alt="testing" src="barcode.php?print=true&size=40&sizefactor=1&text='+set_name+customerid+'" />';
     // get last char of string
     var last_char_of_set_name =  set_name.slice(-1);
     var result = 'res_'+last_char_of_set_name;
@@ -44,10 +44,19 @@ function isDatePicker(dpk){
 }
 
 ///////////////////////////////////////////////////////
+
+// Popup initialization
+$('.test-popup-link').magnificPopup({
+  type: 'image'
+  // other options
+});
+
 // toggle condition text
 $("#condition_text_detail").hide();
   $("#toggle_condition_text").click(function(event) {
     $("#condition_text_detail").toggle();
+      $("#toggle_condition_text").html('แสดงข้อมูลน้อยลง');
+
   });
 
 	isDatePicker($('#birthdate'));

@@ -44,11 +44,11 @@ catch(Exception $e)
 		setcookie( "customerid", $customerinfoArray['customerid'], time() + 36000 );
 		// setcookie( "email", $email, time() + 36000 );
 
-		 echo "<h1>register successfull</h1>";
+		 // echo "<h1>register successfull</h1>";
 
 
 			// redirect to homepage
- 		 header( 'refresh: 2; url=coupon.php' );
+ 		 header( 'refresh: 0; url=coupon.php' );
 
 		 exit(0);
 	}else{

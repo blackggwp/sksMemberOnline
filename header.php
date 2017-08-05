@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="js/jquery-ui.structure.css" />
     <link rel="stylesheet" type="text/css" href="js/jquery-ui.theme.min.css" />
 
-
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
@@ -31,16 +30,27 @@
         <a href="index.php">Home</a>
         <a href="register.php">register</a>
         <a href="coupon.php">coupon</a>
-        <a href="profile.php">myprofile</a>
-
-
-
+        <!-- <a href="profile.php">myprofile</a> -->
     </div>
 
 </div>
+
 <div class="usercmd" style="background-color:red;">
     <div style="float:right;">
-        <?php if(isset($_COOKIE['customerid']) && ($_COOKIE['customerid'] != '')){ echo '<div class="logout_btn"><a href="logout.php">logout</a></div>'; }
+        <?php if(isset($_COOKIE['customerid']) && ($_COOKIE['customerid'] != ''))
+        { 
+            echo '<div id="logout_btn"><a href="logout.php">ออกจากระบบ</a></div>'; 
+            echo '<div id="changepass_btn"><a href="changepass.php">เปลี่ยนรหัสผ่าน</a></div>'; 
+
+            // echo '<button id="logout_btn" onclick="logout.php">logout</button>';
+
+        }
          ?>
     </div>
+    <!-- <div id="changepass_panel">
+        
+    </div>
+    <div class="close_dialog">
+            <img class="close_img" alt="close" src="img/close.png" />
+    </div> -->
 </div>

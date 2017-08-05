@@ -15,7 +15,7 @@ require'header.php';
 
 <div class="portal_panel">
 <div class="portal_login_panel">
-<h2>เข้าสู่ระบบ</h2>
+<h1>เข้าสู่ระบบ</h1>
 
 <h2>อีเมล</h2>
 <input type="email" id="login_email" name="login_email" required="required">
