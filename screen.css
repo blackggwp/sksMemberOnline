@@ -78,7 +78,7 @@ select,input {
     color: #560b0b;
     width: 80%;
     /*max-width: 430px;*/
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 700;
     /*margin-left: auto;*/
     /*margin-right: auto;*/
@@ -89,7 +89,7 @@ select,input {
     margin-top: 60px;
     background-color: #983f2f;
     color: #fff;
-    width: 100%;
+    width: 60%;
     max-width: 430px;
     font-size: 1.2em;
     font-weight: 700;
@@ -112,7 +112,7 @@ select,input {
 .portal_panel {
     display: -webkit-inline-box;*/
     padding-bottom: 20px;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 .portal_login_panel {
     /*padding:6%;*/
@@ -200,6 +200,7 @@ select,input {
 }
 #logout_btn {
     background-color: #ccc;
+    font-size: 1.2em;
     text-align: center;
     max-width: 200px;
     width: 8em;
@@ -208,10 +209,42 @@ select,input {
 }
 #changepass_btn {
     background-color: #ccc;
+    font-size: 1em;
     text-align: center;
     max-width: 200px;
     width: 8em;
+    padding: 0.66em;
     cursor: pointer;
+}
+#forgetpass_btn {
+    background-color: #ccc;
+    font-size: 1em;
+    text-align: center;
+    max-width: 200px;
+    width: 8em;
+    padding: 0.66em;
+    cursor: pointer;
+}
+.back_btn {
+    background-color: #ccc;
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 200px;
+    width: 8em;
+    padding: 0.66em;
+    cursor: pointer;
+}
+
+.submit_btn {
+    width: 8em;
+}
+.changepass_panel {
+    width: 60%;
+    margin: 6em 2em;
+}
+.forgetpass_panel {
+    width: 60%;
+    margin: 6em 2em;
 }
 #changepass_panel {
     display:none;

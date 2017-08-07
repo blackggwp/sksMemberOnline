@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html lang="">
 <?php
 require 'conn.php';
 require 'func.php';
+require 'header.php';
 date_default_timezone_set('Asia/Bangkok');
 $p = $_POST;
 // showArray($_POST);
@@ -22,7 +25,7 @@ $stmt->execute();
 
 
  	}else{
- 		echo "<h1>อีเมลล์นี้ไม่อยู่ในระบบ</h1>";
+ 		echo "<h1>อีเมลล์นี้ไม่มีอยู่ในระบบ</h1>";
 	}
 
 }
@@ -41,7 +44,7 @@ function sendmail($mailto,$userPass){
 
 	$mail->Username = "fuji"; // GMAIL username 
 	$mail->Password = "1234"; // GMAIL password
-	$mail->From = "black.thitikorn@gmail.com"; // "name@yourdomain.com";
+	$mail->From = "webmaster.sukishi@gmail.com"; // "name@yourdomain.com";
 	//$mail->AddReplyTo = "support@thaicreate.com"; // Reply
 	$mail->FromName = "Admin Sukishi";  // set from Name
 	$mail->Subject = "Password sukishi E-Member."; 
@@ -65,9 +68,18 @@ function sendmail($mailto,$userPass){
 }
 	
 ?>
+<div class="forgetpass_panel">
 <form action="" method="post">
 <h2>อีเมล</h2>
 <input type="email" id="input_forget_email" name="input_forget_email" required="required">
-	<button type="submit" name="submit_forgetpass">ส่ง</button>
+<br>
+<br>
+
+	<button class="submit_btn" type="submit" name="submit_forgetpass">ส่ง</button>
 </form>
-<a href="index.php">Back to homepage</a>
+</div>
+
+<a class="back_btn" href="index.php">Back to homepage</a>
+
+<?php require 'footer.php' ?>
+</html>

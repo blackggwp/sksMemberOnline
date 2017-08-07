@@ -24,7 +24,10 @@ if(isset($_COOKIE['customerid'])){
 <h3>เนื้อหมูติดมันหมักซอสซูกิชิ เสิร์ฟพร้อม ข้าวผัดกระเทียม, ซุปใส และ โค้ก</h3>
 
 <div class="imgset">
-  <img class="test-popup-link" src="img/seta.jpg" style="width: 100%;">
+  <a class="imgPopup" href="img/seta.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
+  <img src="img/seta.jpg" width="100%" />  
+  </a>
+  
 <br>
 <br>
 
@@ -41,8 +44,9 @@ if(isset($_COOKIE['customerid'])){
 <h3>เนื้อหมูดำคุโรบุตะสไลด์ เสิร์ฟพร้อม ข้าวผัดกระเทียม ซุปใส และ โค้ก</h3>
  
 <div class="imgset">
-  <img src="img/setb.jpg" style="width: 100%;
-" alt="">
+  <a class="imgPopup" href="img/setb.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
+  <img src="img/setb.jpg" width="100%" />  
+  </a>
 <br>
 <br>
 
@@ -59,8 +63,9 @@ if(isset($_COOKIE['customerid'])){
 <h3>ปลาหมึกหมักสไตล์เกาหลี และ เบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย, ไข่ตุ๋น, ซุปใส 2 ถ้วย และโค้ก 2 ขวด</h3>
 
 <div class="imgset">
-  <img src="img/setc.jpg" style="width: 100%;
-" alt="">
+  <a class="imgPopup" href="img/setc.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
+  <img src="img/setc.jpg" width="100%" />  
+  </a>
 <br>
 <br>
 
@@ -105,7 +110,7 @@ if(isset($_COOKIE['customerid'])){
 <?php  }else{ 
       // redirect to homepage
       ?>
-      <script>alert('กรุณาเข้าสู่ระบบ');</script>
+      <script>alert('กรุณาเข้าสู่ระบบก่อน');</script>
       <?php
      header( 'refresh: 0; url=index.php' );
 

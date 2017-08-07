@@ -10,10 +10,12 @@
     <link rel="stylesheet" type="text/css" href="js/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="js/jquery-ui.structure.css" />
     <link rel="stylesheet" type="text/css" href="js/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" href="libs/Magnific/dist/magnific-popup.css">
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script src="libs/Magnific/dist/jquery.magnific-popup.min.js"></script>
 
     
     <script src="app.js"></script>
@@ -47,6 +49,7 @@
         }
          ?>
     </div>
+    
     <!-- <div id="changepass_panel">
         
     </div>

@@ -21,13 +21,12 @@ require'header.php';
 <input type="email" id="login_email" name="login_email" required="required">
 <h2>รหัสผ่าน</h2>
 <input type="password" id="login_password" name="login_password" required="required">
-
-<div class="forget_password">
-    <a class="forget_password" href="forgetpass.php" target="_blank">ลืมรหัสผ่าน</a>
-</div>
+<br>
 <br>
 
-	
+    <a id="forgetpass_btn" class="forget_password" href="forgetpass.php" target="_blank">ลืมรหัสผ่าน</a>
+<br>
+<br>
 
 <a href="form_login.php">
 	<button type="submit" class="login_btn" name="submit_login_form">เข้าสู่ระบบ</button>
@@ -56,7 +55,7 @@ Sukishi E-Member</b></p>
 
 
 </div>
-
+<br>
 </section>
 </div>
 
