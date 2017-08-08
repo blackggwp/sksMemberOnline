@@ -28,11 +28,14 @@
 
 </head>
 <div class="main_header">
-    <div style="float:left;">
-        <a href="index.php">Home</a>
-        <a href="register.php">register</a>
-        <a href="coupon.php">coupon</a>
-        <!-- <a href="profile.php">myprofile</a> -->
+    <div class="nav_bar">
+    <ul>
+        <li><span><a href="index.php">Home</a></span></li>
+        <li><span><a href="register.php">register</a></span></li>
+        <li><span><a href="coupon.php">coupon</a></span></li>
+
+    </ul>
+        
     </div>
 
 </div>

@@ -14,8 +14,17 @@ require'header.php';
 <form action="form_login.php" method="post">
 
 <div class="portal_panel">
+
+<div class="welcome_message">
+<p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
+Sukishi E-Member</b></p>
+<p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ</p>
+<p>พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
+<p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
+</div>
+
 <div class="portal_login_panel">
-<h1>เข้าสู่ระบบ</h1>
+<h1 style="font-size: 2.5em;">เข้าสู่ระบบ</h1>
 
 <h2>อีเมล</h2>
 <input type="email" id="login_email" name="login_email" required="required">
@@ -33,18 +42,10 @@ require'header.php';
 </a>
 </div>
 
-
-
 </form>
 
 <div class="portal_register_panel">
-<div class="welcome_message">
-<p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
-Sukishi E-Member</b></p>
-<p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ</p>
-<p>พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
-<p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
-</div>
+
 <a href="register.php">
 	<button type="button" class="register_btn">สมัครสมาชิก</button>
 </a>

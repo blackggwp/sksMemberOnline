@@ -3,10 +3,11 @@
 <?php
 require'header.php';
 $text = '123';
+
+
+
 if(isset($_COOKIE['customerid'])){ 
   $customerid = $_COOKIE['customerid'];
-
-
 
 ?>
 <body>
@@ -32,6 +33,8 @@ if(isset($_COOKIE['customerid'])){
 <br>
 
 <button class="getcoupon_btn seta_btn">คลิกรับคูปองชุด A</button>
+<br>
+<!-- <a class="getcoupon_btn seta_btn" href="#">คลิกรับคูปองชุด A</a> -->
 
 <br>
 <br>
