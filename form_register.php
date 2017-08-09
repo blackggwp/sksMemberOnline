@@ -12,7 +12,14 @@ if ((isset($p['registerEmail']) && (isset($p['registerPassword'])))) {
     $pass = $p['registerPassword'];
     $tel = $p['tel'];
     $perid = $p['perid'];
-    $birthdate = splitDate($p['birthdate']);
+    $birthdate = $p['birthdate'];
+    if ($birthdate != '') {
+    	$birthdate = splitDate($p['birthdate']);
+    }
+    $recieveInformation = $p['receiveInformation'];
+    if ($recieveInformation == 'on') {
+    	$recieveInformation = 'true';
+    }
     $outlet = $p['outlet'];
 
 	$systemdate = date("Y-m-d H:i:s");
@@ -21,9 +28,11 @@ if ((isset($p['registerEmail']) && (isset($p['registerPassword'])))) {
 
 try {
 
-$add_cus_sql = "INSERT INTO tcustomer (email, password, tel, perid, birthdate,outlet,systemdate) ";
-$add_cus_sql .= "VALUES ('$email', '$pass', '$tel', '$perid', '$birthdate', '$outlet','$systemdate')";
+$add_cus_sql = "INSERT INTO tcustomer (email, password, tel, perid, birthdate,outlet,systemdate,recieveinformation) ";
+$add_cus_sql .= "VALUES ('$email', '$pass', '$tel', '$perid', '$birthdate', '$outlet','$systemdate','$recieveInformation')";
+	echo $add_cus_sql;
 	$status = $conn->exec($add_cus_sql);
+
 
 	$lastInsertId = $conn->lastInsertId();
 }

@@ -90,21 +90,21 @@ Sukishi E-Member</b></p>
 <h2>สมัครสมาชิก</h2>
 
 <h2>อีเมล<span class="input_require">*</span></h2>
-<input type="email" name="registerEmail" required="required" placeholder="name@email.com">
+<input type="email" name="registerEmail" placeholder="name@email.com" required>
 <h2>รหัสผ่าน<span class="input_require">*</span></h2>
 
-<input type="password" name="registerPassword" required="required" placeholder="Password">
+<input type="password" name="registerPassword" placeholder="Password" required>
 
 <h2>หมายเลขโทรศัพท์มือถือ<span class="input_require">*</span></h2>
 <p>กรอกเบอร์โทรศัพท์มือถือเพื่อรับสิทธิพิเศษมากมายทาง SMS</p>
-    <input type="tel" name="tel" id="inputTel" class="form-control" value="" required="required" title="" placeholder="081-123-4567">
+    <input type="tel" name="tel" id="inputTel" class="form-control" value="" title="" placeholder="081-123-4567" required>
 
     <h2>หมายเลขบัตรประชาชน</h2>
     <input type="number" name="perid" id="InputPerid" class="form-control" value="" title="" placeholder="0-0000-00000-00-0">
 
 <h2>วัน / เดือน / ปีเกิด <span>*</span></h2>
 <p>กรอกเดือนเกิดตามบัตรประชาชนเพื่อรับของขวัญสุดพิเศษในเดือนเกิดของคุณ</p>
-    <input name="birthdate" type="text" id="birthdate" readonly="readonly" placeholder="- Click Select -"  />
+    <input name="birthdate" type="text" id="birthdate" readonly="readonly" placeholder="- Click Select -" required>
 
 
 <h2>สาขาที่คุณสะดวก</h2>
@@ -117,7 +117,7 @@ Sukishi E-Member</b></p>
     </select> -->
 
     <select name="outlet" id="outlet">
-    <option  selected>Choose here</option>
+    <option value="" selected>Choose here</option>
   <?php
     foreach ($outlet as $key => $value) {
       echo '<option value="'.$key.'">'.$value.'</option>';
