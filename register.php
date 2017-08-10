@@ -104,7 +104,7 @@ Sukishi E-Member</b></p>
 
 <h2>วัน / เดือน / ปีเกิด <span>*</span></h2>
 <p>กรอกเดือนเกิดตามบัตรประชาชนเพื่อรับของขวัญสุดพิเศษในเดือนเกิดของคุณ</p>
-    <input name="birthdate" type="text" id="birthdate" readonly="readonly" placeholder="- Click Select -" required>
+    <input type="text"  id="birthdate" name="birthdate" placeholder="- Click Select -" required>
 
 
 <h2>สาขาที่คุณสะดวก</h2>
