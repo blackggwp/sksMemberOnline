@@ -113,9 +113,12 @@ if(isset($_COOKIE['customerid'])){
 <?php  }else{ 
       // redirect to homepage
       ?>
-      <script>alert('กรุณาเข้าสู่ระบบก่อน');</script>
+      <script>
+      alert('กรุณาเข้าสู่ระบบก่อน');
+      window.location.replace("index.php");
+      </script>
       <?php
-     header( 'refresh: 0; url=index.php' );
+     // header( 'refresh: 0; url=index.php' );
 
      exit(0);
      } ?>
