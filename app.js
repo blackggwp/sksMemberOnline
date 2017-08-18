@@ -1,4 +1,8 @@
 $( document ).ready(function() {
+
+function validateEmail() {
+  alert('in func validate email');
+}  
 function savecoupon(set_name,customerid){
 
   var data = 'setname='+set_name+'&customerid='+customerid;
@@ -42,8 +46,52 @@ function isDatePicker(dpk){
         monthNamesShort: ["1","2","3","4","5","6","7","8","9","10","11","12"]
     });
 }
+function register_member(){
+  var data = $('#form_register').serialize();
+    $.ajax({
+        method: "POST",
+        url: "form_register.php",
+        data: data
+      })
+      .done(function( msg ) {
+        alert("Register status: "+msg);
+
+      });
+}
 
 ///////////////////////////////////////////////////////
+
+// validate form data
+// $('.login_btn').click(function(event) {
+    
+//     var userEmail = $("#login_email").val();
+//     var userPass = $("#login_password").val();
+//     var error = "";
+
+//     if (userEmail == '') {
+//       error = '*กรุณากรอกอีเมล์';
+//       $(".email_error").text(error);
+//       // event.preventDefault();
+//     };
+    // if (userPass == '') {
+    //   $(".password_error").text('*กรุณากรอกรหัสผ่าน');
+    //   // event.preventDefault();
+    // };
+    // if ((userEmail != '') && (userPass != '')) {
+    //   alert('login complete');
+    // }
+
+
+// $( "#userlogin_failed_dialog" ).dialog({
+//          modal: true,
+//          close: function() {
+//            // window.location.replace("register.php");
+//          }
+//        });
+    
+// });
+
+
 
 // magnificPopup image
 $('a.imgPopup').magnificPopup({
@@ -68,7 +116,7 @@ $('a.imgPopup').magnificPopup({
             verticalFit: false
         }
   
-    });
+});
 
 // toggle condition text
 $("#condition_text_detail").hide();
@@ -132,18 +180,7 @@ $("#condition_text_detail").hide();
 	  	$(barcode).hide();
 	});
 
-function register_member(){
-	var data = $('#form_register').serialize();
-	  $.ajax({
-        method: "POST",
-        url: "form_register.php",
-        data: data
-      })
-      .done(function( msg ) {
-        alert("Register status: "+msg);
 
-      });
-}
 
 });
 

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
+
+
 <?php
 require'header.php';
 
@@ -76,7 +78,6 @@ $outlet = array(
 
 
 
-<form action="form_register.php" method="post" id="form_register">
 
 <div class="register_panel">
 <div class="welcome_message">
@@ -87,24 +88,35 @@ Sukishi E-Member</b></p>
 <p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
 </div>
 <hr>
+
+<form action="form_register.php" method="post" id="form_register">
+
+<!-- <fieldset> -->
+
 <h2>สมัครสมาชิก</h2>
+    <!-- <legend><h2>สมัครสมาชิก</h2></legend> -->
 
 <h2>อีเมล<span class="input_require">*</span></h2>
+<label id="registerEmail-error" class="error" for="registerEmail"></label><br>
 <input type="email" name="registerEmail" placeholder="name@email.com" required>
-<h2>รหัสผ่าน<span class="input_require">*</span></h2>
 
+<h2>รหัสผ่าน<span class="input_require">*</span></h2>
+<label id="registerPassword-error" class="error" for="registerPassword"></label><br>
 <input type="password" name="registerPassword" placeholder="Password" required>
 
 <h2>หมายเลขโทรศัพท์มือถือ<span class="input_require">*</span></h2>
 <p>กรอกเบอร์โทรศัพท์มือถือเพื่อรับสิทธิพิเศษมากมายทาง SMS</p>
-    <input type="tel" name="tel" id="inputTel" class="form-control" value="" title="" placeholder="081-123-4567" required>
+<label id="tel-error" class="error" for="tel"></label><br>
+    <input type="tel" name="tel" id="tel" class="form-control" value="" title="" placeholder="0812345678" required>
 
-    <h2>หมายเลขบัตรประชาชน</h2>
-    <input type="number" name="perid" id="InputPerid" class="form-control" value="" title="" placeholder="0-0000-00000-00-0">
+<h2>หมายเลขบัตรประชาชน</h2>
+<label id="perid-error" class="error" for="perid"></label><br>
+<input type="number" name="perid" id="perid" class="form-control" value="" title="" placeholder="0-0000-00000-00-0">
 
 <h2>วัน / เดือน / ปีเกิด <span>*</span></h2>
 <p>กรอกเดือนเกิดตามบัตรประชาชนเพื่อรับของขวัญสุดพิเศษในเดือนเกิดของคุณ</p>
-    <input type="text"  id="birthdate" name="birthdate" placeholder="- Click Select -" required>
+<label id="birthdate-error" class="error" for="birthdate"></label><br>
+<input type="text"  id="birthdate" name="birthdate" placeholder="- Click Select -" required>
 
 
 <h2>สาขาที่คุณสะดวก</h2>
@@ -115,7 +127,7 @@ Sukishi E-Member</b></p>
 
 
     </select> -->
-
+<label id="outlet-error" class="error" for="outlet"></label><br>
     <select name="outlet" id="outlet">
     <option value="" selected>Choose here</option>
   <?php
@@ -130,6 +142,7 @@ Sukishi E-Member</b></p>
 
 <div class="checkbox">
   <label>
+    <label id="receiveInformation-error" class="error" for="receiveInformation"></label><br>
     <input type="checkbox" class="receiveInformation" name="receiveInformation">
     ต้องการรับข้อมูลข่าวสาร ทางอีเมลและ SMS
   </label>
@@ -139,7 +152,7 @@ Sukishi E-Member</b></p>
   <button type="submit" name="form_register_submit" id="register_submit_btn">สมัครสมาชิก</button>
 
 </div>
-
+<!-- </fieldset> -->
 </form>
 
 </div>

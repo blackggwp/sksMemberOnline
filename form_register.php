@@ -1,17 +1,19 @@
 <?php 
 require'conn.php';
 require'func.php';
+require'initscript.php';
 date_default_timezone_set('Asia/Bangkok');
 
 $p = $_POST;
 if (isset($p['form_register_submit'])) {
 
-if ((isset($p['registerEmail']) && (isset($p['registerPassword'])))) {
+if ((isset($p['registerEmail']) && (isset($p['registerPassword'])) 
+	&& (isset($p['tel'])) && (isset($p['birthdate'])) )) {
 	// showArray($p);
 	$email = $p['registerEmail'];
     $pass = $p['registerPassword'];
-    $tel = $p['tel'];
-    $perid = $p['perid'];
+    $tel = inputNumOnly($p['tel']);
+    $perid = inputNumOnly($p['perid']);
     $birthdate = $p['birthdate'];
     if ($birthdate != '') {
     	$birthdate = splitDate($p['birthdate']);
@@ -30,7 +32,7 @@ try {
 
 $add_cus_sql = "INSERT INTO tcustomer (email, password, tel, perid, birthdate,outlet,systemdate,recieveinformation) ";
 $add_cus_sql .= "VALUES ('$email', '$pass', '$tel', '$perid', '$birthdate', '$outlet','$systemdate','$recieveInformation')";
-	echo $add_cus_sql;
+	// echo $add_cus_sql;
 	$status = $conn->exec($add_cus_sql);
 
 
@@ -52,19 +54,56 @@ catch(Exception $e)
 
 		setcookie( "customerid", $customerinfoArray['customerid'], time() + 36000 );
 		// setcookie( "email", $email, time() + 36000 );
+?>
+<div id="register_success_dialog" title="Message" style="display:none;">
+  <p>สมัครสมาชิกสำเร็จแล้ว<br>
+  ระบบกำลังนำท่านไปยังหน้าคูปอง</p>
+</div>
+<script>
+$( "#register_success_dialog" ).dialog({
+      modal: true,
+      close: function() {
+        window.location.replace("coupon.php");
+      }
+    });
+</script>
 
-		 // echo "<h1>register successfull</h1>";
-
-
-			// redirect to homepage
- 		 header( 'refresh: 0; url=coupon.php' );
-
+<?php
 		 exit(0);
-	}else{
-		echo "<h1>register unsuccessfull</h1>";
+	}
+	else{
+?>
+<div id="register_failed_dialog" title="Message" style="display:none;">
+  <p>สมัครสมาชิกไม่สำเร็จ<br>กรุณาลองใหม่อีกครั้ง</p>
+</div>
+
+<script>
+$( "#register_failed_dialog" ).dialog({
+      modal: true,
+      close: function() {
+        window.location.replace("register.php");
+      }
+    });
+</script>
+<?php
 		exit(0);
 	}
 
+}
+else{
+	?>
+<div id="register_failed_dialog2" title="Message" style="display:none;">
+  <p>ท่านกรอกข้อมูลไม่ครบถ้วน<br>กรุณาลองใหม่อีกครั้ง</p>
+</div>
+<script>
+$( "#register_failed_dialog2" ).dialog({
+      modal: true,
+      close: function() {
+        window.location.replace("register.php");
+      }
+    });
+</script>
+<?php	
 }
 }
 

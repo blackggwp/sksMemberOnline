@@ -75,8 +75,8 @@ select,input {
 }
 .login_btn {
     margin-top: 5%;
-    background-color: #fff;
-    color: #866f39;
+    background-color: #f19b9b;
+    color: #000;
     width: 30%;
     max-width: 430px;
     font-size: 1.2em;
@@ -246,7 +246,7 @@ select,input {
     padding: 0.66em;
     cursor: pointer;
     text-decoration: none;
-    color: #f58886;
+    color: #543a3a;
 }
 .back_btn {
     background-color: #ccc;
@@ -309,7 +309,11 @@ select,input {
     display: list-item;
     position: absolute;
 }
-
+.error {
+  
+  color: red;
+  
+}
 
 input::placeholder {
   padding-left: 10px;

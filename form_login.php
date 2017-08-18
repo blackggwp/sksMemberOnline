@@ -1,6 +1,8 @@
 <?php 
 require'conn.php';
 require'func.php';
+require'initscript.php';
+
 
 $p = $_POST;
 
@@ -32,8 +34,34 @@ $customerinfoArray = $stmt->fetch( PDO::FETCH_ASSOC );
 
  		 header( 'refresh: 0; url=coupon.php' );
  		 exit(0);
- 	}else{
- 		echo "<h1>login unsuccess please try again.</h1>";
+ 	}
+ 	else{
+ 		?>
+
+ <div id="login_failed_dialog" title="Message" style="display:none;">
+  <p>อีเมล์หรือรหัสผ่านไม่ถูกต้อง<br>กรุณาลองใหม่อีกครั้ง</p>
+</div>
+ 	<script>
+    $( "#login_failed_dialog" ).dialog({
+      modal: true,
+      buttons: {
+      	Ok: function() {
+          $( this ).dialog( "close" );
+        	window.location.replace("index.php");
+
+        }
+
+      },
+      close: function() {
+        window.location.replace("index.php");
+      }
+    });
+ 		
+ 	</script>
+ 		<?php
+
+ 		 exit(0);
+
 	}
 
 

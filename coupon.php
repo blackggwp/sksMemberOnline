@@ -110,15 +110,32 @@ if(isset($_COOKIE['customerid'])){
 ?>
 </html>
 
-<?php  }else{ 
-      // redirect to homepage
-      ?>
+<?php  }
+else{ 
+  ?>
+
+<div id="login_first_dialog" title="Message" style="display:none;">
+  <p>กรุณาเข้าสู่ระบบก่อน</p>
+</div>
+
       <script>
-      alert('กรุณาเข้าสู่ระบบก่อน');
-      window.location.replace("index.php");
+      // alert('กรุณาเข้าสู่ระบบก่อน');
+
+      $( "#login_first_dialog" ).dialog({
+        modal: true,
+        Ok: function() {
+          $( this ).dialog( "close" );
+          window.location.replace("index.php");
+
+        },
+        close: function() {
+            window.location.replace("index.php");
+        }
+        });
       </script>
       <?php
      // header( 'refresh: 0; url=index.php' );
 
      exit(0);
-     } ?>
+     } 
+?>
