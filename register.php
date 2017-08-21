@@ -70,7 +70,11 @@ $outlet = array(
 'Sukishi BBQ Bluport Huahin'
 );
 ?>
-<body>
+<body style="background-image: url(img/bg2.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;">
+
 <div class="bg_register">
 <section id="root_content">
 <div class="container" style="text-align: center;">
@@ -80,20 +84,20 @@ $outlet = array(
 
 
 <div class="register_panel">
-<div class="welcome_message">
+<!-- <div class="welcome_message">
 <p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
 Sukishi E-Member</b></p>
 <p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ</p>
 <p>พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
 <p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
 </div>
-<hr>
+<hr> -->
 
 <form action="form_register.php" method="post" id="form_register">
 
 <!-- <fieldset> -->
 
-<h2>สมัครสมาชิก</h2>
+<h1 style="color:#C74633">สมัครสมาชิก</h1>
     <!-- <legend><h2>สมัครสมาชิก</h2></legend> -->
 
 <h2>อีเมล<span class="input_require">*</span></h2>

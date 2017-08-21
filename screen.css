@@ -1,15 +1,18 @@
 /*@import "http://fonts.googleapis.com/css?family=Montserrat:300,400,700";*/
-@import url('https://fonts.googleapis.com/css?family=Kanit');
-/*@import url('https://fonts.googleapis.com/css?family=Itim');*/
-/*****resolve td text too long********/
+/*@import url('https://fonts.googleapis.com/css?family=Kanit');*/
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
+/*****resolve td text too long********/
 @media (max-width: 390px) {
     .td__textlong {
         min-width: 100%;
     }
 }
+/*****resolve td text too long********/
+
 * {
-    font-family: 'Kanit', sans-serif;
+    /*font-family: 'Kanit', sans-serif;*/
+    font-family: 'Fjalla One', sans-serif;
 }
 body,html {
     margin: 0px;
@@ -28,55 +31,50 @@ select,input {
     height: 100px;
 }
 .main_header {
-    /*text-align: center;*/
-    /*background-color:#9a8787;*/
-    background-image:url("img/header2-min.jpg");
-    /*height: 200px;*/
-    /*width: 100%;*/
-    /*margin-bottom: 5%;*/
+    
+    /*background-image:url("img/header2-min.jpg");
     background-repeat: no-repeat;
-    /*background-position: center;*/
     background-size: 100% auto !important;
-
-    /*background-size: auto 40%;*/
     background-position: 50% 0;
     width: 100%;
     padding-top: 22%;
     position: relative;
     top: 0;
     left: 0;
-    right: 0;
+    right: 0;*/
 
+}
+.index_header {
+    background-image: url(img/hi.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100% !important;
+    background-position: 50% 100%;
+    width: 100%;
+    padding-top: 22%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .bg_index { 
-    /* The image used */
-    background-image: url("img/bg_index-min.jpg");
-
-    /* Full height */
+    /*background-image: url("img/bg_index-min.jpg");
     height: 100%; 
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
 }
 .bg_register { 
-    /* The image used */
-    background-image: url("img/bg_regis-min.jpg");
-
-    /* Full height */
+    /*background-image: url("img/bg_regis-min.jpg");
     height: 100%; 
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
 }
 .login_btn {
     margin-top: 5%;
-    background-color: #f19b9b;
-    color: #000;
+    background-color: #ffffff;
+    color: #9A7D64;
     width: 30%;
     max-width: 430px;
     font-size: 1.2em;
@@ -85,11 +83,12 @@ select,input {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    text-decoration: none;
 
 }
 .register_btn {
     margin-top: 5%;
-    background-color: #733B24;
+    background-color: #C84734;
     color: #fff;
     width: 30%;
     max-width: 430px;
@@ -99,10 +98,11 @@ select,input {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    text-decoration: none;
 }
 #register_submit_btn {
     margin-top: 60px;
-    background-color: #983f2f;
+    background-color: #C84734;
     color: #fff;
     width: 100%;
     max-width: 430px;
@@ -111,16 +111,16 @@ select,input {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    text-decoration: none;
 }
 .getcoupon_btn {
-    margin-top: 5%;
-    background-color: #E5A150;
+    background-color: #C74533;
     color: #fff;
-    width: 30%;
+    width: 27%;
     max-width: 300px;
-    font-size: 1.2em;
-    font-weight: 400;
-    padding: 0.6em;
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 0.8em;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
@@ -134,13 +134,13 @@ select,input {
     font-size: 0.7em;
 }
 .portal_panel input {
-    width: 30%;
+    width: 50%;
 }
 .portal_login_panel {
     /*padding:6%;*/
 }
 .portal_register_panel {
-    background-color: rgba(245, 242, 242, 0.76);
+    /*background-color: rgba(245, 242, 242, 0.76);*/
     /*padding-top: 10px;*/
     /*font-size: 0.8em;*/
 }
@@ -148,8 +148,8 @@ select,input {
     font-size: 1.2em;
 }
 .register_panel {
-    background-color: rgba(245, 242, 242, 0.76);
-    padding: 6%;
+    /*background-color: rgba(245, 242, 242, 0.76);*/
+    /*padding: 6%;*/
     width: 70%;
     display: inline-block;
     font-size: 0.8em;
@@ -199,7 +199,9 @@ select,input {
 
 .main_footer{
     display: -webkit-inline-box;
+    display: inline-flex;
     width:100%;
+    background-color: #C84734;
 }
 .footer_logo{
         width: 30%;
@@ -214,7 +216,7 @@ select,input {
     }
 .condition_text {
     /*margin-bottom: 60px;*/
-    padding: 5%;
+    padding: 0% 5% 2%;
 }
 .receiveInformation {
     width: 10%;
@@ -246,7 +248,7 @@ select,input {
     padding: 0.66em;
     cursor: pointer;
     text-decoration: none;
-    color: #543a3a;
+    color: #DFA198;
 }
 .back_btn {
     background-color: #ccc;
@@ -294,7 +296,8 @@ select,input {
     margin-bottom:20px;
 }
 .imgset {
-    padding: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 .nav_bar {
     text-align: center;
@@ -310,9 +313,41 @@ select,input {
     position: absolute;
 }
 .error {
-  
   color: red;
-  
+}
+.coupon_des_text {
+    text-align: left;
+}
+.displayed_img_mascot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headerimg_mascot {
+    max-width: 150px;
+    max-height: 150px;
+}
+.decoration_img {
+    max-width: 120px;
+    max-height: 150px;
+    position: absolute;
+    right: 70px;
+    top: 200px;
+}
+.footerimg_mascot {
+    max-width: 100px;
+    max-height: 100px;
+    float: right;
+    /*position: absolute;*/
+}
+.nav_bar a {
+    color: #564B45;
+}
+.main_footer_logo {
+    width: auto;
+    height: 72px;
+    margin-bottom: 4%;
+    float:right;
 }
 
 input::placeholder {
@@ -332,12 +367,16 @@ input::placeholder {
 
     .portal_panel {
         display:block;
-        margin-top: 10%;
+        /*margin-top: 10%;*/
     }
     .main_header {
         /*min-height: 100px;*/
         /*height: 100px;*/
         /*margin-bottom: 20px;*/
+    }
+    .decoration_img {
+        right: 0;
+        width: 15%;
     }
 }
 @media screen and (max-width: 480px) {
@@ -355,6 +394,12 @@ input::placeholder {
     }
     .footer_contactus{
         width: 100%;
+    }
+    .main_footer_logo {
+        float: none;
+    }
+    .decoration_img {
+        top: 80px;
     }
 
 

@@ -15,9 +15,7 @@
 
 <div class="main_footer">
 
-<div class="footer_logo">
-	<a target="_blank" href="https://www.sukishigroup.com"><img src="img/skslogo.png" alt="skslogo"  style="width: auto;height: 72px;margin-bottom: 4%;" /></a>
-</div>
+
 
 <div class="footer_followus">
 	<span><b>Follow Us</b></span><br>
@@ -42,6 +40,10 @@
 		<p>บริษัท ซูกิชิ อินเตอร์กรุ๊ป จำกัด</p>
 		<p>โทร : 02-785-2899</p>
 	</span>
+</div>
+
+<div class="footer_logo">
+	<a target="_blank" href="https://www.sukishigroup.com"><img class="main_footer_logo" src="img/skslogo.png" alt="skslogo" /></a>
 </div>
 
 </div>

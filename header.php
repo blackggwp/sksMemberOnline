@@ -2,9 +2,9 @@
 <div class="main_header">
     <div class="nav_bar">
     <ul>
-        <li><span><a href="index.php">Home</a></span></li>
-        <li><span><a href="register.php">register</a></span></li>
-        <li><span><a href="coupon.php">coupon</a></span></li>
+        <li><span><a href="index.php"><b>Home</b></a></span></li>
+        <li><span><a href="register.php"><b>register</b></a></span></li>
+        <li><span><a href="coupon.php"><b>coupon</b></a></span></li>
 
     </ul>
         

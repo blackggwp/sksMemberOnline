@@ -19,16 +19,16 @@ $(function() {
         email: true
       },
       login_password: {
-        required: true,
-        minlength: 6
+        required: true
+        // minlength: 6
       }
     },
     // Specify validation error messages
     messages: {
       // login_email: "กรุณากรอกอีเมล์",
       login_password: {
-        required: "กรุณากรอกรหัสผ่าน",
-        minlength: "กรุณากรอกรหัสผ่านอย่างน้อย 6 ตัวอักษร"
+        required: "กรุณากรอกรหัสผ่าน"
+        // minlength: "กรุณากรอกรหัสผ่านอย่างน้อย 6 ตัวอักษร"
       },
       login_email: {
       	required: "กรุณากรอกอีเมล์",
@@ -57,8 +57,8 @@ $(function() {
         email: true
       },
       registerPassword: {
-        required: true,
-        minlength: 6
+        required: true
+        // minlength: 6
       },
       tel: {
       	required: true,
@@ -79,8 +79,8 @@ $(function() {
       		email: "กรุณากรอกอีเมล์ให้ถูกต้อง"
       	},
       	registerPassword: {
-        	required: "กรุณากรอกรหัสผ่าน",
-        	minlength: "กรุณากรอกรหัสผ่านอย่างน้อย 6 ตัวอักษร"
+        	required: "กรุณากรอกรหัสผ่าน"
+        	// minlength: "กรุณากรอกรหัสผ่านอย่างน้อย 6 ตัวอักษร"
       	},
         tel: {
           required: "กรุณากรอกเบอร์โทรศัพท์"

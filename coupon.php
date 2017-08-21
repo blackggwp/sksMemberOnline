@@ -10,6 +10,10 @@ if(isset($_COOKIE['customerid'])){
   $customerid = $_COOKIE['customerid'];
 
 ?>
+<body style="background-image: url(img/bg3.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 30%;">
 <body>
 <div class="bg_index">
 <section id="root_content">
@@ -21,13 +25,14 @@ if(isset($_COOKIE['customerid'])){
 <div class="container" style="text-align: center;">
 
 <div class="container" style="text-align: -webkit-center;">
-<h2>Grill Lover Set A</h2>
-<h3>เนื้อหมูติดมันหมักซอสซูกิชิ เสิร์ฟพร้อม ข้าวผัดกระเทียม, ซุปใส และ โค้ก</h3>
+<!-- <h2>Grill Lover Set A</h2> -->
+<div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div>
 
 <div class="imgset">
   <a class="imgPopup" href="img/seta.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
-  <img src="img/seta.jpg" width="100%" />  
+  <img src="img/seta.jpg" style="width:100%;" />  
   </a>
+<h3 class="coupon_des_text">เนื้อหมูติดมันหมักซอสซูกิชิ เสิร์ฟพร้อม ข้าวผัดกระเทียม, ซุปใส และ โค้ก</h3>
   
 <br>
 <br>
@@ -43,13 +48,15 @@ if(isset($_COOKIE['customerid'])){
 
 </div>
 
-<h2>Grill Lover Set B</h2>
-<h3>เนื้อหมูดำคุโรบุตะสไลด์ เสิร์ฟพร้อม ข้าวผัดกระเทียม ซุปใส และ โค้ก</h3>
+<!-- <h2>Grill Lover Set B</h2> -->
+<div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div>
+
  
 <div class="imgset">
   <a class="imgPopup" href="img/setb.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
-  <img src="img/setb.jpg" width="100%" />  
+  <img src="img/setb.jpg" style="width:100%;"  />  
   </a>
+<h3 class="coupon_des_text">เนื้อหมูดำคุโรบุตะสไลด์ เสิร์ฟพร้อม ข้าวผัดกระเทียม ซุปใส และ โค้ก</h3>
 <br>
 <br>
 
@@ -62,13 +69,15 @@ if(isset($_COOKIE['customerid'])){
 
 </div>
 
-<h2>Grill Lover Set C</h2>
-<h3>ปลาหมึกหมักสไตล์เกาหลี และ เบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย, ไข่ตุ๋น, ซุปใส 2 ถ้วย และโค้ก 2 ขวด</h3>
+<!-- <h2>Grill Lover Set C</h2> -->
+<div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div>
 
 <div class="imgset">
   <a class="imgPopup" href="img/setc.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
-  <img src="img/setc.jpg" width="100%" />  
+  <img src="img/setc.jpg" style="width:100%;" />  
   </a>
+<h3 class="coupon_des_text">ปลาหมึกหมักสไตล์เกาหลี และ เบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย, ไข่ตุ๋น, ซุปใส 2 ถ้วย และโค้ก 2 ขวด</h3>
+
 <br>
 <br>
 
