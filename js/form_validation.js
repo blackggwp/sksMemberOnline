@@ -65,6 +65,11 @@ $(function() {
       	digits:true,
         minlength: 10,
         maxlength: 10
+      },
+      perid: {
+        digits:true,
+        minlength: 13,
+        maxlength: 13
       }
     },
     // Specify validation error messages
@@ -76,7 +81,13 @@ $(function() {
       	registerPassword: {
         	required: "กรุณากรอกรหัสผ่าน",
         	minlength: "กรุณากรอกรหัสผ่านอย่างน้อย 6 ตัวอักษร"
-      	}
+      	},
+        tel: {
+          required: "กรุณากรอกเบอร์โทรศัพท์"
+        },
+        birthdate: {
+          required: "กรุณากรอกวันเดือนปีเกิด"
+        }
       
     },
     submitHandler: function(form) {
