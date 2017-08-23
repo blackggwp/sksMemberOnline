@@ -43,7 +43,7 @@
 </div>
 
 <div class="footer_logo">
-	<a target="_blank" href="https://www.sukishigroup.com"><img class="main_footer_logo" src="img/skslogo.png" alt="skslogo" /></a>
+	<a target="_blank" href="https://www.sukishigroup.com"><img class="main_footer_logo" src="img/0-08.png" alt="skslogo" /></a>
 </div>
 
 </div>

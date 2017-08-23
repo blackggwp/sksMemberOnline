@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-
-
+<div class="register_header"></div>
 <?php
 require'header.php';
 
@@ -70,10 +69,10 @@ $outlet = array(
 'Sukishi BBQ Bluport Huahin'
 );
 ?>
-<body style="background-image: url(img/bg2.jpg);
+<body style="background-image: url(img/bg02.jpg);
     height: 100%;
     background-repeat: no-repeat;
-    background-size: 100% 60%;">
+    background-size: 100% 100%;">
 
 <div class="bg_register">
 <section id="root_content">
@@ -111,7 +110,7 @@ Sukishi E-Member</b></p>
 <h2>หมายเลขโทรศัพท์มือถือ<span class="input_require">*</span></h2>
 <p>กรอกเบอร์โทรศัพท์มือถือเพื่อรับสิทธิพิเศษมากมายทาง SMS</p>
 <label id="tel-error" class="error" for="tel"></label><br>
-    <input type="tel" name="tel" id="tel" class="form-control" value="" title="" placeholder="0812345678" required>
+    <input type="tel" name="tel" id="tel" class="form-control" value="" title="" placeholder="08x-xxx-xxxx" required>
 
 <h2>หมายเลขบัตรประชาชน</h2>
 <label id="perid-error" class="error" for="perid"></label><br>

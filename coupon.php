@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+<div class="coupon_header"></div>
 <?php
 require'header.php';
 $text = '123';
@@ -10,10 +11,10 @@ if(isset($_COOKIE['customerid'])){
   $customerid = $_COOKIE['customerid'];
 
 ?>
-<body style="background-image: url(img/bg3.jpg);
+<body style="background-image: url(img/bg0.jpg);
     height: 100%;
     background-repeat: no-repeat;
-    background-size: 100% 30%;">
+    background-size: 100% 100%;">
 <body>
 <div class="bg_index">
 <section id="root_content">
@@ -29,8 +30,8 @@ if(isset($_COOKIE['customerid'])){
 <div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div>
 
 <div class="imgset">
-  <a class="imgPopup" href="img/seta.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
-  <img src="img/seta.jpg" style="width:100%;" />  
+  <a class="imgPopup" href="img/CO1.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
+  <img src="img/CO1.jpg" class="displayed_coupon_img" />  
   </a>
 <h3 class="coupon_des_text">เนื้อหมูติดมันหมักซอสซูกิชิ เสิร์ฟพร้อม ข้าวผัดกระเทียม, ซุปใส และ โค้ก</h3>
   
@@ -48,13 +49,13 @@ if(isset($_COOKIE['customerid'])){
 
 </div>
 
-<!-- <h2>Grill Lover Set B</h2> -->
-<div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div>
+<h2>Grill Lover Set B</h2>
+<!-- <div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div> -->
 
  
 <div class="imgset">
-  <a class="imgPopup" href="img/setb.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
-  <img src="img/setb.jpg" style="width:100%;"  />  
+  <a class="imgPopup" href="img/CO1.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
+  <img src="img/CO1.jpg" class="displayed_coupon_img" />  
   </a>
 <h3 class="coupon_des_text">เนื้อหมูดำคุโรบุตะสไลด์ เสิร์ฟพร้อม ข้าวผัดกระเทียม ซุปใส และ โค้ก</h3>
 <br>
@@ -69,12 +70,12 @@ if(isset($_COOKIE['customerid'])){
 
 </div>
 
-<!-- <h2>Grill Lover Set C</h2> -->
-<div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div>
+<h2>Grill Lover Set C</h2>
+<!-- <div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div> -->
 
 <div class="imgset">
-  <a class="imgPopup" href="img/setc.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
-  <img src="img/setc.jpg" style="width:100%;" />  
+  <a class="imgPopup" href="img/CO1.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
+  <img src="img/CO1.jpg" class="displayed_coupon_img" />  
   </a>
 <h3 class="coupon_des_text">ปลาหมึกหมักสไตล์เกาหลี และ เบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย, ไข่ตุ๋น, ซุปใส 2 ถ้วย และโค้ก 2 ขวด</h3>
 
@@ -124,7 +125,10 @@ else{
   ?>
 
 <div id="login_first_dialog" title="Message" style="display:none;">
-  <p>กรุณาเข้าสู่ระบบก่อน</p>
+  <!-- <p>กรุณาเข้าสู่ระบบก่อน</p> -->
+  <div style="text-align: center;">
+  <img src="img/0-09.png" style="width: 200px;height: 100px;" alt="login first alert">
+  </div>
 </div>
 
       <script>
@@ -132,10 +136,11 @@ else{
 
       $( "#login_first_dialog" ).dialog({
         modal: true,
+        buttons: {
         Ok: function() {
           $( this ).dialog( "close" );
           window.location.replace("index.php");
-
+          }
         },
         close: function() {
             window.location.replace("index.php");

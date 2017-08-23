@@ -50,6 +50,8 @@ require'header.php';
 									<br>
 									<br>
 
+									<!-- <input type="submit" class="login_btn" name="submit_login_form" value="เข้าสู่ระบบ" /> -->
+
 									<a href="form_login.php">
 										<button type="submit" class="login_btn" name="submit_login_form">เข้าสู่ระบบ</button>
 									</a>
