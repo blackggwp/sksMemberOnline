@@ -9,7 +9,9 @@ require'header.php';
     background-repeat: no-repeat;
     background-size: 100% 100%;">
 	<div class="bg_index">
-	<div class="displayed_decoration_img"><img class="decoration_img" src="img/b2.png" alt=""></div>
+	<div class="displayed_decoration_img" style="text-align:right;">
+		<img class="decoration_img" src="img/b2.png" alt="">
+	</div>
 		<section id="root_content">
 			<div class="container" style="text-align: center;">
 				<!-- <h1>Sukishi Register Online</h1> -->
@@ -58,17 +60,15 @@ require'header.php';
 									</div>
 						</form>
 
-						
 						<div class="portal_register_panel">
 
 							<a href="register.php" ><div class="register_btn">สมัครสมาชิก</div></a>
-							
-
 						</div>
-
+						<div class="displayed_footer_mascot">
 							<img class="footerimg_mascot" src="img/0-03.png" alt="">
 
-
+						</div>
+						
 					</div>
 
 
@@ -87,3 +87,13 @@ require'header.php';
 	<div id="userlogin_failed_dialog" title="Message" style="display:none;">
 		<p>ท่านกรอกข้อมูลอีเมล์ไม่ถูกต้อง<br>กรุณาลองใหม่อีกครั้ง</p>
 	</div>
+	<script>
+	$(function () {
+		$("#root_content,.condition_text").css({
+			position: 'relative',
+			top: '-100px'
+		});
+
+
+	});
+	</script>

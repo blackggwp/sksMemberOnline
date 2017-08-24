@@ -69,12 +69,15 @@ $outlet = array(
 'Sukishi BBQ Bluport Huahin'
 );
 ?>
-<body style="background-image: url(img/bg02.jpg);
+<body style="background-image: url(img/bg01.jpg);
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;">
 
 <div class="bg_register">
+<div class="displayed_decoration_img" style="text-align:right;">
+    <img class="decoration_img" src="img/b2.png" alt="">
+  </div>
 <section id="root_content">
 <div class="container" style="text-align: center;">
 <!-- <h1>Sukishi Register Online</h1> -->

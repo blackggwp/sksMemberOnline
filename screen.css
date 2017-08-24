@@ -20,7 +20,8 @@ body,html {
 select,input {
     font-size: 1.5em;
     height: 1.6em;
-    width: 80%;
+    width: 60%;
+    max-width: 400px;
 }
 .test {
     
@@ -64,7 +65,7 @@ select,input {
     background-size: cover;*/
 }
 .register_header {
-    background-image: url(img/edit1head2.png);
+    background-image: url(img/edit1head3.png);
     background-repeat: no-repeat;
     background-size: 100% 100% !important;
     background-position: 100% 100%;
@@ -83,7 +84,7 @@ select,input {
     background-size: cover;*/
 }
 .coupon_header {
-    background-image: url(img/edit1head3.png);
+    background-image: url(img/edit1head2.png);
     background-repeat: no-repeat;
     background-size: 100% 100% !important;
     background-position: 100% 100%;
@@ -98,7 +99,7 @@ select,input {
     margin-top: 3%;
     background-color: #ffffff;
     color: #9A7D64;
-    width: 50%;
+    width: 35%;
     max-width: 50%;
     font-size: 1.2em;
     font-weight: 700;
@@ -113,7 +114,7 @@ select,input {
     margin-top: 5%;
     background-color: #C84734;
     color: #fff;
-    width: 48%;
+    width: 33%;
     max-width: 50%;
     font-size: 1.2em;
     font-weight: 700;
@@ -153,7 +154,6 @@ select,input {
 }
 .portal_panel {
     /*display: -webkit-inline-box;*/
-    padding-top: 2%;
     padding-bottom: 20px;
     font-size: 0.7em;
 }
@@ -232,7 +232,7 @@ select,input {
     padding: 1em 0px 0px 1em;
 }
 .footer_logo{
-        width: 30%;
+        width: 37%;
     }
 .footer_followus{
         width: 30%;
@@ -330,10 +330,10 @@ img.displayed_coupon_img {
     /*background-color: white;*/
     margin-left: -15px;
 
-    background-image: url(img/bg_barcode.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-image: url(img/bg_barcode.png);*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 }
 .imgbarcode {
     margin-top:20px;
@@ -368,7 +368,7 @@ img.displayed_coupon_img {
     text-align: center;
 }
 .coupon_des_text {
-    text-align: left;
+    /*text-align: left;*/
 }
 .displayed_img_mascot {
     display: block;
@@ -382,28 +382,33 @@ img.displayed_coupon_img {
 .decoration_img {
     max-width: 120px;
     max-height: 150px;
-    position: absolute;
+    /*position: absolute;
     right: 70px;
-    top: 370px;
+    top: 370px;*/
+    vertical-align: top;
+    position: relative;
+    top: -100px;
+}
+.displayed_footer_mascot {
+    text-align:right;
+    position: relative;
+    top: -100px;
+    left: -250px;
 }
 .footerimg_mascot {
     max-width: 100px;
     max-height: 100px;
     /* float: right; */
-    position: absolute;
-    right: 260px;
-    top: 1250px;
+    /*position: absolute;*/
+    /*right: 260px;*/
+    /*top: 1250px;*/
 }
 .main_footer_logo {
     width: auto;
-    height: 72px;
+    height: 100px;
     float:right;
 }
-.usercmd {
-        position: absolute;
-    right: 100px;
-    top: 280px;
-}
+
 input::placeholder {
   padding-left: 10px;
 }
@@ -428,10 +433,8 @@ input::placeholder {
         /*height: 100px;*/
         /*margin-bottom: 20px;*/
     }
-    .decoration_img {
-        right: 0;
-        top:250px;
-        width: 15%;
+    .displayed_footer_mascot {
+        left: -50px;
     }
 }
 @media screen and (max-width: 480px) {
@@ -450,9 +453,6 @@ input::placeholder {
     }
     .main_footer_logo {
         float: none;
-    }
-    .decoration_img {
-        top: 150px;
     }
 
 

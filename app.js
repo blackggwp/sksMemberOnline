@@ -121,8 +121,12 @@ $('a.imgPopup').magnificPopup({
 // toggle condition text
 $("#condition_text_detail").hide();
   $("#toggle_condition_text").click(function(event) {
-    $("#condition_text_detail").toggle();
-      $("#toggle_condition_text").html('แสดงข้อมูลน้อยลง');
+
+    // $("#condition_text_detail").toggle();
+      // $("#toggle_condition_text").html('แสดงข้อมูลน้อยลง');
+      $("#toggle_condition_text>a").hide();
+    $("#condition_text_detail").show();
+      event.preventDefault();
 
   });
 
