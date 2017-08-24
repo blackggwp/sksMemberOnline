@@ -75,7 +75,7 @@ $outlet = array(
     background-size: 100% 100%;">
 
 <div class="bg_register">
-<div class="displayed_decoration_img" style="text-align:right;">
+<div class="displayed_decoration_img" style="text-align:right;height: 0px;">
     <img class="decoration_img" src="img/b2.png" alt="">
   </div>
 <section id="root_content">
@@ -99,7 +99,7 @@ Sukishi E-Member</b></p>
 
 <!-- <fieldset> -->
 
-<h1 style="color:#C74633">สมัครสมาชิก</h1>
+<h1 style="color:#C74633;font-size: 2em;">สมัครสมาชิก</h1>
     <!-- <legend><h2>สมัครสมาชิก</h2></legend> -->
 
 <h2>อีเมล<span class="input_require">*</span></h2>
@@ -150,7 +150,7 @@ Sukishi E-Member</b></p>
   <label>
     <label id="receiveInformation-error" class="error" for="receiveInformation"></label><br>
     <input type="checkbox" class="receiveInformation" name="receiveInformation">
-    ต้องการรับข้อมูลข่าวสาร ทางอีเมลและ SMS
+    <span class="register_infotext">ต้องการรับข้อมูลข่าวสาร ทางอีเมลและ SMS</span>
   </label>
 </div>
 

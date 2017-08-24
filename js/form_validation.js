@@ -91,7 +91,20 @@ $(function() {
       
     },
     submitHandler: function(form) {
-      form.submit();
+
+
+      $.ajax({
+        method: "POST",
+        url: "form_register.php",
+        data: {x:1}
+      })
+      .done(function( msg ) {
+        console.log("Register status: "+msg);
+
+      });
+
+
+      // form.submit();
     }
   });
 

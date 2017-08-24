@@ -1,5 +1,9 @@
 <?php
 
+function splitDate($d){
+	$a=explode("/", $d);
+	return $a[1].'/'.$a[0].'/'.$a[2];
+}
 function showArray($var) {
 	echo "<pre>";
 		print_r($var);

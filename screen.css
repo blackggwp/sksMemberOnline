@@ -22,6 +22,7 @@ select,input {
     height: 1.6em;
     width: 60%;
     max-width: 400px;
+    min-width: 210px;
 }
 .test {
     
@@ -65,7 +66,7 @@ select,input {
     background-size: cover;*/
 }
 .register_header {
-    background-image: url(img/edit1head3.png);
+    background-image: url(img/edit1head2.png);
     background-repeat: no-repeat;
     background-size: 100% 100% !important;
     background-position: 100% 100%;
@@ -84,7 +85,7 @@ select,input {
     background-size: cover;*/
 }
 .coupon_header {
-    background-image: url(img/edit1head2.png);
+    background-image: url(img/edit1head3.png);
     background-repeat: no-repeat;
     background-size: 100% 100% !important;
     background-position: 100% 100%;
@@ -128,8 +129,9 @@ select,input {
     margin-top: 60px;
     background-color: #C84734;
     color: #fff;
-    width: 80%;
+    width: 50%;
     max-width: 80%;
+    min-width: 210px;
     font-size: 1.88em;
     font-weight: 700;
     margin-left: auto;
@@ -247,7 +249,8 @@ select,input {
     padding: 0% 5% 2%;
 }
 .receiveInformation {
-    width: 10%;
+    min-width: 50px;
+    width: 50px;
 }
 #logout_btn {
     background-color: #C74634;
@@ -312,7 +315,7 @@ select,input {
     height: 100%;
     background-color:#f1a8994d;
 }
-.usercmd a,b {
+.usercmd a,.usercmd b {
     font-family: 'Fjalla One', sans-serif !important;
     color: #fff;
     cursor: pointer;
@@ -350,6 +353,7 @@ img.displayed_coupon_img {
     color: #564B45;
     font-family: 'Fjalla One', sans-serif !important;
     text-decoration: none;
+    font-size: 1.2em;
 }
 .nav_bar ul li {
     display: inline-block;
@@ -380,8 +384,8 @@ img.displayed_coupon_img {
     max-height: 150px;
 }
 .decoration_img {
-    max-width: 120px;
-    max-height: 150px;
+    width: 200px;
+    height: 260px;
     /*position: absolute;
     right: 70px;
     top: 370px;*/
@@ -408,7 +412,14 @@ img.displayed_coupon_img {
     height: 100px;
     float:right;
 }
-
+.register_infotext {
+    font-size: 1.4em;
+}
+.user_btn {
+    text-align: -webkit-right;
+    position:relative;
+    top:-250px;
+}
 input::placeholder {
   padding-left: 10px;
 }
@@ -438,6 +449,10 @@ input::placeholder {
     }
 }
 @media screen and (max-width: 480px) {
+    .user_btn {
+        top: -150px;
+        font-size: 0.7em;
+    }
     .main_footer{
     display: block;
     padding: 2%;

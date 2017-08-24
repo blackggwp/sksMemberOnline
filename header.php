@@ -14,7 +14,7 @@
 </div>
 
 <div class="usercmd">
-    <div style="text-align: -webkit-right;">
+    <div class="user_btn">
         <?php if(isset($_COOKIE['customerid']) && ($_COOKIE['customerid'] != ''))
         { 
             echo '<a href="logout.php"><div id="logout_btn"><b>LOG OUT</b></div></a>'; 

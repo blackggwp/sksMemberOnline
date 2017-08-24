@@ -17,7 +17,7 @@ if(isset($_COOKIE['customerid'])){
     background-size: 100% 100%;">
 <body>
 <div class="bg_index">
-<div class="displayed_decoration_img" style="text-align:right;">
+<div class="displayed_decoration_img" style="text-align:right;height: 0px;">
     <img class="decoration_img" src="img/b2.png" alt="">
   </div>
 <section id="root_content">

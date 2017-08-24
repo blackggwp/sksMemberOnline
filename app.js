@@ -21,7 +21,7 @@ function savecoupon(set_name,customerid){
 }
 
 function gencode(set_name,customerid){
-    var imgbarcode =  '<img class="imgbarcode" alt="testing" src="barcode.php?print=true&size=40&sizefactor=1&text='+set_name+customerid+'" />';
+    var imgbarcode =  '<img class="imgbarcode" alt="testing" src="barcode.php?print=true&size=80&sizefactor=1&text='+set_name+customerid+'" />';
     // get last char of string
     var last_char_of_set_name =  set_name.slice(-1);
     var result = 'res_'+last_char_of_set_name;
@@ -61,37 +61,7 @@ function register_member(){
 
 ///////////////////////////////////////////////////////
 
-// validate form data
-// $('.login_btn').click(function(event) {
-    
-//     var userEmail = $("#login_email").val();
-//     var userPass = $("#login_password").val();
-//     var error = "";
-
-//     if (userEmail == '') {
-//       error = '*กรุณากรอกอีเมล์';
-//       $(".email_error").text(error);
-//       // event.preventDefault();
-//     };
-    // if (userPass == '') {
-    //   $(".password_error").text('*กรุณากรอกรหัสผ่าน');
-    //   // event.preventDefault();
-    // };
-    // if ((userEmail != '') && (userPass != '')) {
-    //   alert('login complete');
-    // }
-
-
-// $( "#userlogin_failed_dialog" ).dialog({
-//          modal: true,
-//          close: function() {
-//            // window.location.replace("register.php");
-//          }
-//        });
-    
-// });
-
-
+// move up section and condition cause decoration img not behind
 
 // magnificPopup image
 $('a.imgPopup').magnificPopup({

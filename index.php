@@ -9,7 +9,7 @@ require'header.php';
     background-repeat: no-repeat;
     background-size: 100% 100%;">
 	<div class="bg_index">
-	<div class="displayed_decoration_img" style="text-align:right;">
+	<div class="displayed_decoration_img" style="text-align:right;height: 0px;">
 		<img class="decoration_img" src="img/b2.png" alt="">
 	</div>
 		<section id="root_content">
@@ -87,13 +87,3 @@ require'header.php';
 	<div id="userlogin_failed_dialog" title="Message" style="display:none;">
 		<p>ท่านกรอกข้อมูลอีเมล์ไม่ถูกต้อง<br>กรุณาลองใหม่อีกครั้ง</p>
 	</div>
-	<script>
-	$(function () {
-		$("#root_content,.condition_text").css({
-			position: 'relative',
-			top: '-100px'
-		});
-
-
-	});
-	</script>

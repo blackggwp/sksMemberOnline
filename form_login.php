@@ -1,6 +1,7 @@
 <?php 
 require'conn.php';
-require'func.php';
+// require'func.php';
+require'initfunc.php';
 require'initscript.php';
 
 
@@ -8,11 +9,10 @@ $p = $_POST;
 
 if (isset($p['submit_login_form'])) {
 	
-if ($p['login_email'] && $p['login_password'] != '') {
-	# code...
+if ( strlen(trim($p['login_email'])) && strlen(trim($p['login_password'])) != 0 ) {
 	// showArray($p);
 	$login_email = $p['login_email'];
-    $login_password = $p['login_password'];
+  $login_password = $p['login_password'];
 
 
 $sql = "SELECT * FROM tcustomer WHERE email = '$login_email' AND password = '$login_password' ";

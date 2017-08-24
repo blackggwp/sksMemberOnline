@@ -1,20 +1,34 @@
 <?php 
 require'conn.php';
-require'func.php';
+// require'func.php';
 require'initscript.php';
+require'initfunc.php';
+
 date_default_timezone_set('Asia/Bangkok');
 
 $p = $_POST;
+  showArray($p);
+if ($p['x'] == 1) {
+  echo '<div id="email_used_dialog" title="Message" style="display:none;">
+  <p>อีเมล์นี้ถูกใช้ไปแล้ว</p></div>';
+  exit(0);
+}
 if (isset($p['form_register_submit'])) {
 
-if ((isset($p['registerEmail']) && (isset($p['registerPassword'])) 
-	&& (isset($p['tel'])) && (isset($p['birthdate'])) )) {
-	// showArray($p);
+// if ((isset($p['registerEmail']) && (isset($p['registerPassword'])) 
+	// && (isset($p['tel'])) && (isset($p['birthdate'])) )) {
+	if ( strlen(trim($p['registerEmail'])) && strlen(trim($p['registerPassword']))
+	&& strlen(trim($p['tel'])) && strlen(trim($p['birthdate'])) != 0 ) {
 	$email = $p['registerEmail'];
     $pass = $p['registerPassword'];
     $tel = inputNumOnly($p['tel']);
     $perid = inputNumOnly($p['perid']);
     $birthdate = $p['birthdate'];
+
+    // check email and perid
+  checkEmail($conn,$email);
+	checkPerid($conn,$perid);
+
     if ($birthdate != '') {
     	$birthdate = splitDate($p['birthdate']);
     }
@@ -62,6 +76,11 @@ catch(Exception $e)
 <script>
 $( "#register_success_dialog" ).dialog({
       modal: true,
+      buttons: {
+      	Ok: function() {
+        	window.location.replace("coupon.php");
+      	}
+      },
       close: function() {
         window.location.replace("coupon.php");
       }
@@ -105,6 +124,67 @@ $( "#register_failed_dialog2" ).dialog({
 </script>
 <?php	
 }
+}
+function checkEmail($conn,$email) {
+$chkEmailStr = " SELECT email FROM tcustomer WHERE email = '$email' ";
+$stmt = $conn->prepare($chkEmailStr);
+$stmt->execute();
+// var_dump($stmt);
+$chkemail = $stmt->rowCount();
+	
+	if( $chkemail == -1 ) {
+?>
+<div id="email_used_dialog" title="Message" style="display:none;">
+  <p>อีเมล์นี้ถูกใช้ไปแล้ว</p>
+</div>
+<script>
+$( "#email_used_dialog" ).dialog({
+      modal: true,
+      buttons: {
+      	Ok: function() {
+        	window.location.replace("register.php");
+      	}
+      },
+      close: function() {
+        window.location.replace("register.php");
+      }
+    });
+</script>
+<?php
+ 		 // echo "found !!";
+ 		 exit(0);
+ 	}
+}
+function checkPerid($conn,$perid) {
+$chkPeridStr = " SELECT perid FROM tcustomer WHERE (perid = '$perid') ";
+
+$stmt = $conn->prepare($chkPeridStr);
+$stmt->execute();
+// var_dump($stmt);
+$chkperid = $stmt->rowCount();
+// echo "returnRow = ".$chk;
+	if( $chkperid == -1 ) {
+?>
+<div id="perid_used_dialog" title="Message" style="display:none;">
+  <p>หมายเลขบัตรประชาชนนี้ถูกใช้ไปแล้ว</p>
+</div>
+<script>
+$( "#perid_used_dialog" ).dialog({
+      modal: true,
+      buttons: {
+      	Ok: function() {
+        	window.location.replace("register.php");
+      	}
+      },
+      close: function() {
+        window.location.replace("register.php");
+      }
+    });
+</script>
+<?php
+ 		 // echo "found !!";
+ 		 exit(0);
+ 	}
 }
 
 function updatetcustomer($conn){
