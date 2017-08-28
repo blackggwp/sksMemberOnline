@@ -7,7 +7,7 @@ require'initfunc.php';
 date_default_timezone_set('Asia/Bangkok');
 
 $p = $_POST;
-  showArray($p);
+  // showArray($p);
 if ($p['x'] == 1) {
   echo '<div id="email_used_dialog" title="Message" style="display:none;">
   <p>อีเมล์นี้ถูกใช้ไปแล้ว</p></div>';

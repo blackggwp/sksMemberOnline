@@ -83,7 +83,13 @@ $(function() {
         	// minlength: "กรุณากรอกรหัสผ่านอย่างน้อย 6 ตัวอักษร"
       	},
         tel: {
-          required: "กรุณากรอกเบอร์โทรศัพท์"
+          required: "กรุณากรอกเบอร์โทรศัพท์",
+          minlength: "กรุณากรอกหมายเลขอย่างน้อย 10 ตัวอักษร",
+          maxlength: "กรุณากรอกหมายเลขไม่เกิน 10 ตัวอักษร"
+        },
+        perid: {
+          minlength: "กรุณากรอกหมายเลขอย่างน้อย 13 ตัวอักษร",
+          maxlength: "กรุณากรอกหมายเลขไม่เกิน 13 ตัวอักษร"
         },
         birthdate: {
           required: "กรุณากรอกวันเดือนปีเกิด"
@@ -91,20 +97,7 @@ $(function() {
       
     },
     submitHandler: function(form) {
-
-
-      $.ajax({
-        method: "POST",
-        url: "form_register.php",
-        data: {x:1}
-      })
-      .done(function( msg ) {
-        console.log("Register status: "+msg);
-
-      });
-
-
-      // form.submit();
+      form.submit();
     }
   });
 

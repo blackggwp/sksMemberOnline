@@ -62,7 +62,9 @@ require'header.php';
 
 						<div class="portal_register_panel">
 
-							<a href="register.php" ><div class="register_btn">สมัครสมาชิก</div></a>
+							<a href="register.php">
+							<div class="register_btn">สมัครสมาชิก</div>
+</a>
 						</div>
 						<div class="displayed_footer_mascot">
 							<img class="footerimg_mascot" src="img/0-03.png" alt="">

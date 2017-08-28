@@ -394,7 +394,8 @@ img.displayed_coupon_img {
     top: -100px;
 }
 .displayed_footer_mascot {
-    text-align:right;
+    /*text-align:right;*/
+    float: right;
     position: relative;
     top: -100px;
     left: -250px;
