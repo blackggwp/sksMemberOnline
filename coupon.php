@@ -30,7 +30,7 @@ if(isset($_COOKIE['customerid'])){
 
 <div class="container" style="text-align: -webkit-center;">
 <!-- <h2>Grill Lover Set A</h2> -->
-<div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 14em;max-height: 14em;" alt=""></div>
+<div class="coupon_heading_text"><img src="img/0-02.png" style="max-width: 10em;max-height: 10em;" alt=""></div>
 
 <div class="imgset">
   <a class="imgPopup" href="img/CO1.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
