@@ -13,7 +13,6 @@ function showArray($var) {
 }
 function splittag($tag) {
 	$t = split(',', $tag);
-	
 	return ($t);
 }
 function removeAllSpace($str){

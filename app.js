@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 function validateEmail() {
   alert('in func validate email');
-}  
+}
 function savecoupon(set_name,customerid){
 
   var data = 'setname='+set_name+'&customerid='+customerid;
@@ -58,20 +58,32 @@ function register_member(){
 
       });
 }
-function wordbreak(){
-    alert('wordbreak');
+function replaceDoubleSpaceWithbr(txt){
+//    console.log(txt);
+    return txt = txt.replace(/  /g, "<br>\n");
 }
 
 ///////////////////////////////////////////////////////
 
-// move up section and condition cause decoration img not behind
+var mq = window.matchMedia( "(max-width: 460px)" );
+if (mq.matches) {
+    // window width is at less than 500px
+    // console.log('true');
+    var text_set_a = $('.coupon_des_text set_a').text();
+    var res_set_a = replaceDoubleSpaceWithbr(text_set_a);
+    console.log(text_set_a);
+}
+else {
+    // window width is greater than 500px
+    console.log('false');
+}
 
 // magnificPopup image
 $('a.imgPopup').magnificPopup({
         type: 'image',
         closeBtnInside: false,
     closeOnContentClick: false,
-  
+
     callbacks: {
       open: function() {
         var self = this;
@@ -84,11 +96,11 @@ $('a.imgPopup').magnificPopup({
         this.wrap.removeClass('mfp-force-scrollbars');
       }
     },
-     
+
     image: {
             verticalFit: false
         }
-  
+
 });
 
 // toggle condition text
@@ -109,13 +121,13 @@ $("#condition_text_detail").hide();
 	// 	register_member();
 	// });
 
-//clicked coupon set A 
+//clicked coupon set A
   $('.seta_btn').click(function(event) {
   	var set_name = 'SKGLA';
   	var customerid = String($('#customerid').val());
-  	
+
 	  savecoupon(set_name,customerid);
-    
+
 	//esc key press
 	document.onkeydown = function(evt) {
     	evt = evt || window.event;
@@ -129,7 +141,7 @@ $("#condition_text_detail").hide();
   	var set_name = 'SKGLB';
   	var customerid = String($('#customerid').val());
 	  savecoupon(set_name,customerid);
-    
+
 	//esc key press
 	document.onkeydown = function(evt) {
     	evt = evt || window.event;
@@ -143,7 +155,7 @@ $("#condition_text_detail").hide();
   	var set_name = 'SKGLC';
   	var customerid = String($('#customerid').val());
 	  savecoupon(set_name,customerid);
-    
+
 	//esc key press
 	document.onkeydown = function(evt) {
     	evt = evt || window.event;
@@ -152,7 +164,7 @@ $("#condition_text_detail").hide();
     	}
 	};
   });
-  
+
   $('.close_dialog').click(function(event) {
 	  	$(barcode).hide();
 	});
@@ -160,4 +172,3 @@ $("#condition_text_detail").hide();
 
 
 });
-

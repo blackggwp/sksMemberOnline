@@ -1,3 +1,17 @@
+<p id="coupon_des_text">Grill Lover Set A :  เนื้อหมูติดมันหมักซอสซูกิชิ  เสิร์ฟพร้อม ข้าวผัดกระเทียม,  ซุปใส และโค้ก</p>
+
+<script>
+    
+const mq = window.matchMedia( "(max-width: 460)" );
+if (mq.matches) {
+    alert('true');
+
+} else {
+    alert('false');
+}
+    
+</script>
+
 <?php 
 require'conn.php';
 // require'func.php';
@@ -7,9 +21,8 @@ require'initfunc.php';
 $email = 'ttt@ttt';
 $perid = '3434254325445';
 
-checkEmail($conn,$email);
+//checkEmail($conn,$email);
 // checkPerid($conn,$perid);
-
 
 
 function checkEmail($conn,$email) {
