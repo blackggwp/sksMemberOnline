@@ -38,15 +38,13 @@ if(isset($_COOKIE['customerid'])){
   </a>
 <h3 class="coupon_des_text set_a">Grill Lover Set A:  เนื้อหมูติดมันหมักซอสซูกิชิ  เสิร์ฟพร้อม ข้าวผัดกระเทียม,  ซุปใส และ โค้ก</h3>
 
-<br>
-<br>
 
 <button class="getcoupon_btn seta_btn">คลิกรับคูปองชุด A</button>
 <br>
 <!-- <a class="getcoupon_btn seta_btn" href="#">คลิกรับคูปองชุด A</a> -->
 
 <br>
-<br>
+ 
   <div id="res_A"></div>
 <hr>
 
@@ -61,8 +59,6 @@ if(isset($_COOKIE['customerid'])){
   <img src="img/c-o-02.jpg" class="displayed_coupon_img" />
   </a>
 <h3 class="coupon_des_text set_b">Grill Lover Set B:  เนื้อหมูดำคุโรบุตะสไลด์  เสิร์ฟพร้อม ข้าวผัดกระเทียม,  ซุปใส และ โค้ก</h3>
-<br>
-<br>
 
 <button class="getcoupon_btn setb_btn">คลิกรับคูปองชุด B</button>
 
@@ -82,8 +78,6 @@ if(isset($_COOKIE['customerid'])){
   </a>
 <h3 class="coupon_des_text set_c">Grill Lover Set C:  ปลาหมึกหมักสไตล์เกาหลี  และเบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย,  ไข่ตุ๋น, ซุปใส 2 ถ้วย  และโค้ก 2 ขวด</h3>
 
-<br>
-<br>
 
 <button class="getcoupon_btn setc_btn">คลิกรับคูปองชุด C</button>
 

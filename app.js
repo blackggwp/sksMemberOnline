@@ -60,22 +60,33 @@ function register_member(){
 }
 function replaceDoubleSpaceWithbr(txt){
 //    console.log(txt);
-    return txt = txt.replace(/  /g, "<br>\n");
+    return txt = txt.replace(/  /g, "<br>");
 }
 
 ///////////////////////////////////////////////////////
 
+//Media query with javascript
 var mq = window.matchMedia( "(max-width: 460px)" );
 if (mq.matches) {
-    // window width is at less than 500px
+    // window width is at less than 460px
     // console.log('true');
-    var text_set_a = $('.coupon_des_text set_a').text();
+    var text_set_a = $('.coupon_des_text.set_a').text();
+    var text_set_b = $('.coupon_des_text.set_b').text();
+    var text_set_c = $('.coupon_des_text.set_c').text();
+
     var res_set_a = replaceDoubleSpaceWithbr(text_set_a);
-    console.log(text_set_a);
+    var res_set_b = replaceDoubleSpaceWithbr(text_set_a);
+    var res_set_c = replaceDoubleSpaceWithbr(text_set_a);
+
+//    console.log(res_set_a);
+    $('.coupon_des_text.set_a').html( res_set_a );
+    $('.coupon_des_text.set_b').html( res_set_b );
+    $('.coupon_des_text.set_c').html( res_set_c );
+
 }
 else {
-    // window width is greater than 500px
-    console.log('false');
+    // window width is greater than 460px
+//    console.log('false');
 }
 
 // magnificPopup image
