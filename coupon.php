@@ -76,7 +76,7 @@ if(isset($_COOKIE['customerid'])){
   <a class="imgPopup" href="img/c-o-03.jpg" class="with-caption image-link" title="Click on image to enlarge/reduce it">
   <img src="img/c-o-03.jpg" class="displayed_coupon_img" />
   </a>
-<h3 class="coupon_des_text set_c">Grill Lover Set C:  ปลาหมึกหมักสไตล์เกาหลี  และเบคอน เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย,  ไข่ตุ๋น, ซุปใส 2 ถ้วย  และโค้ก 2 ขวด</h3>
+<h3 class="coupon_des_text set_c">Grill Lover Set C:  ปลาหมึกหมักสไตล์เกาหลี และเบคอน  เสิร์ฟพร้อม ข้าวผัดกระเทียม 2 ถ้วย,  ไข่ตุ๋น, ซุปใส 2 ถ้วย  และโค้ก 2 ขวด</h3>
 
 
 <button class="getcoupon_btn setc_btn">คลิกรับคูปองชุด C</button>

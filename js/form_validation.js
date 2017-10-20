@@ -34,7 +34,7 @@ $(function() {
       	required: "กรุณากรอกอีเมล์",
       	email: "กรุณากรอกอีเมล์ให้ถูกต้อง"
 
-      } 
+      }
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
@@ -94,7 +94,30 @@ $(function() {
         birthdate: {
           required: "กรุณากรอกวันเดือนปีเกิด"
         }
-      
+
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+
+  $("form[id='form_register']").validate({
+    rules: {
+      //refer accord to name element
+      input_forget_email: "required"
+
+      input_forget_email: {
+        required: true,
+        email: true
+      }
+    },
+    // Specify validation error messages
+    messages: {
+      input_forget_email: {
+          required: "กรุณากรอกอีเมล์",
+          email: "กรุณากรอกอีเมล์ให้ถูกต้อง"
+        }
+
     },
     submitHandler: function(form) {
       form.submit();

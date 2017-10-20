@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
+<div class="index_header"></div>
+
 <?php
 require 'conn.php';
 require 'func.php';
@@ -16,7 +18,7 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 // var_dump($stmt);
 
-	
+
 	if( $stmt->rowCount() ) {
 		$customerinfoArray = $stmt->fetch( PDO::FETCH_ASSOC );
 
@@ -25,7 +27,9 @@ $stmt->execute();
 
 
  	}else{
- 		echo "<h1>อีเมลล์นี้ไม่มีอยู่ในระบบ</h1>";
+ 		echo '<h2 id="forgetpass_unsuccess_text">ไม่มี Email นี้อยู่ในระบบ</br>
+กรุณากรอก Email ใหม่อีกครั้ง หรือ <a href="register.php">สมัครสมาชิก</a>
+</h2>';
 	}
 
 }
@@ -42,12 +46,12 @@ function sendmail($mailto,$userPass){
 	// $mail->SMTPSecure = "ssl"; // sets the prefix to the servier
 	// $mail->Port = 465; // set the SMTP port for the GMAIL server
 
-	$mail->Username = "fuji"; // GMAIL username 
+	$mail->Username = "fuji"; // GMAIL username
 	$mail->Password = "1234"; // GMAIL password
 	$mail->From = "webmaster.sukishi@gmail.com"; // "name@yourdomain.com";
 	//$mail->AddReplyTo = "support@thaicreate.com"; // Reply
 	$mail->FromName = "Admin Sukishi";  // set from Name
-	$mail->Subject = "Password sukishi E-Member."; 
+	$mail->Subject = "Password sukishi E-Member.";
 	$mail->Body = "Your password is: <b>".$userPass."</b>";
 
 
@@ -59,27 +63,27 @@ function sendmail($mailto,$userPass){
 	$status = $mail->Send();
 	if ($status) {
 	 	// echo 'send mail complete';
- 		echo "<h1>ส่งรหัสผ่านของท่านไปตามที่อยู่อีเมลล์นี้แล้ว</h1>";
+ 		echo '<h2 id="forgetpass_success_text">ส่งรหัสผ่านของท่านไปตามที่อยู่ Email นี้แล้ว</h2>';
 
 	 }else
 	 {
 	 	echo "send mail not complete";
 	 }
 }
-	
+
 ?>
-<div class="forgetpass_panel">
-<form action="" method="post">
-<h2>อีเมล</h2>
-<input type="email" id="input_forget_email" name="input_forget_email" required="required">
+<div class="forgetpass_panel" style="text-align:center;">
+<form action="" method="post" name="form_forgetpass">
+<h2>Email</h2>
+<input type="email" id="input_forget_email" name="input_forget_email" required="required" placeholder="example@mail.com">
 <br>
 <br>
 
-	<button class="submit_btn" type="submit" name="submit_forgetpass">ส่ง</button>
+	<button class="forget_submit_btn" type="submit" name="submit_forgetpass">Send</button>
 </form>
 </div>
+	<a class="forgetpass_back_btn" href="index.php"><</a>
 
-<a class="back_btn" href="index.php">Back to homepage</a>
 
 <?php require 'footer.php' ?>
 </html>

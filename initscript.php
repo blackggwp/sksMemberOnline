@@ -6,7 +6,7 @@
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
-    
+
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
@@ -18,10 +18,15 @@
     <link rel="stylesheet" type="text/css" href="js/jquery-ui.theme.min.css" />
     <link rel="stylesheet" href="libs/Magnific/dist/magnific-popup.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+
+
+
     <script src="js/jqueryui/jquery-ui.js"></script>
     <script src="libs/Magnific/dist/jquery.magnific-popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    
+
     <!-- custom js -->
     <script src="app.js"></script>
     <script src="js/form_validation.js"></script>
@@ -29,6 +34,6 @@
     <!-- Add respond.js for responsive table-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 
-    
+
 
 </head>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
+
 <div class="index_header"></div>
 <?php
 require'header.php';
@@ -24,11 +25,11 @@ require'header.php';
                         <div class="displayed_img_mascot"><img class="headerimg_mascot" src="img/0-04.png" alt=""></div>
 
                         <div class="welcome_message">
-                            <p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก 
+                            <p><b>ยินดีต้อนรับท่านเข้าสู่การเป็นสมาชิก
 								Sukishi E-Member</b></p>
                             <p>ลงทะเบียนกับเราเพื่อให้คุณมีช่วงเวลาดีๆ ที่ซูกิชิ</p>
                             <p>พร้อมรับข่าวสารและโปรโมชั่นก่อนใคร</p>
-                            <p>aaaรวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
+                            <p>รวมทั้งสิทธิพิเศษมากมายที่ไม่ควรพลาด!</p>
                         </div>
 
                         <div class="portal_login_panel">
